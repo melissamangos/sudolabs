@@ -23,6 +23,7 @@ body {
 	background: #FFF;
 	font-family: inherit;
 	font-weight: lighter;
+	padding-top: 51px;
 }
 
 // Typography
@@ -47,6 +48,28 @@ body {
     	padding-left: $media-left-right-padding;
     	padding-right: $media-left-right-padding;
   }
+}
+
+.nav-section {
+	@include contentSection(0, 0, $blue, 0, 0);
+	ul {
+		li {
+			// vertical-align: bottom;
+			// display: inline-block;	
+			text-decoration: none;
+			font: 1em GothamBold;
+			color: white;	
+			// margin-left: 1em;
+			// margin-right: 1em;
+			a {
+				text-decoration: none !important;
+				color: white !important;
+			}	
+			// a:hover {
+			// 	CARA ADD HOVER
+			// }
+		}
+	}
 }
 
 .main-section {
@@ -92,7 +115,6 @@ body {
   	@media (max-width: 850px) {
   		display: none;
   	}
-
 }
 
 // Buttons
@@ -108,4 +130,26 @@ body {
 }
 .btn-green {
 	@include buttonStyling ($green, $white);
+	max-width: 350px;
+  }
+
+#sudo-arrow {
+	// width: 25%;
+	height: 50px;
+}
+
+// Bootstrap Fixes
+.container {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.navbar-brand {
+	padding: 0px;
+	padding-left: 15px; 
+}
+
+.navbar-default .navbar-toggle {
+	background-color: $white;
+	border: none;
 }

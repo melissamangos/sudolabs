@@ -9,12 +9,33 @@
 body {
   background: #FFF;
   font-family: inherit;
-  font-weight: lighter; }
+  font-weight: lighter;
+  padding-top: 51px; }
 
 .subtitle {
   font: 1em GothamLight;
   margin-left: 30%;
   margin-right: 30%; }
+
+.nav-section {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  background-color: #445d64; }
+  @media (max-width: 600px) {
+    .nav-section {
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-left: 0;
+      padding-right: 0; } }
+  .nav-section ul li {
+    text-decoration: none;
+    font: 1em GothamBold;
+    color: white; }
+    .nav-section ul li a {
+      text-decoration: none !important;
+      color: white !important; }
 
 .main-section {
   padding-top: 0;
@@ -70,4 +91,20 @@ body {
   border-radius: 50px;
   width: 140px;
   border: none;
-  padding: .6em 2em .6em 2em; }
+  padding: .6em 2em .6em 2em;
+  max-width: 350px; }
+
+#sudo-arrow {
+  height: 50px; }
+
+.container {
+  padding-left: 5px;
+  padding-right: 5px; }
+
+.navbar-brand {
+  padding: 0px;
+  padding-left: 15px; }
+
+.navbar-default .navbar-toggle {
+  background-color: #FFFFFF;
+  border: none; }
