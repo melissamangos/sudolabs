@@ -1,5 +1,9 @@
-body {
-  background: #FFF; }
+@font-face {
+  font-family: myFirstFont;
+  src: url();
+  font-weight: bold; }
 
-img {
-  width: 100vw; }
+body {
+  background: #FFF;
+  font-family: inherit;
+  font-weight: lighter; }

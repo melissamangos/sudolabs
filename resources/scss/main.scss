@@ -5,7 +5,16 @@ $pink: #ed7a88;
 $green: #45bab3;
 $darkgrey: #3d3d3d;
 
+// Fonts
+@font-face {
+    font-family: myFirstFont;
+    src: url();
+    font-weight: bold;
+}
+
 // Body
 body {
 	background: #FFF;
+	font-family: inherit;
+	font-weight: lighter;
 }
