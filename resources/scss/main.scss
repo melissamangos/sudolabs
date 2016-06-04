@@ -22,6 +22,7 @@ body {
 	background: #FFF;
 	font-family: inherit;
 	font-weight: lighter;
+	padding-top: 51px;
 }
 
 // Typography
@@ -48,6 +49,28 @@ body {
   }
 }
 
+.nav-section {
+	@include contentSection(0, 0, $blue, 0, 0);
+	ul {
+		li {
+			// vertical-align: bottom;
+			// display: inline-block;	
+			text-decoration: none;
+			font: 1em GothamBold;
+			color: white;	
+			// margin-left: 1em;
+			// margin-right: 1em;
+			a {
+				text-decoration: none !important;
+				color: white !important;
+			}	
+			// a:hover {
+			// 	CARA ADD HOVER
+			// }
+		}
+	}
+}
+
 .main-section {
 	@include contentSection(0, 0, $lightgrey, 0, 0);
 	height: 100vh;
@@ -66,3 +89,20 @@ body {
 	width: 50vw;
 	max-width: 350px;
   }
+
+#sudo-arrow {
+	// width: 25%;
+	height: 50px;
+
+}
+
+// Bootstrap Fixes
+.container {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.navbar-brand {
+	padding: 0px;
+	padding-left: 15px; 
+}
