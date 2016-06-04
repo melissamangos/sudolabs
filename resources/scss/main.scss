@@ -27,9 +27,8 @@ body {
 // Typography
 .subtitle {
 	font: 1em GothamLight;
-	text-align: center;
-	margin-left:2em;
-	margin-right:2em;
+	margin-left: 100% * 0.3;
+	margin-right: 100% * 0.3;
 }
 
 
@@ -54,15 +53,16 @@ body {
 	height: 100vh;
     min-height: 100vh;
     position: relative;
-    text-align: center;
 }
 
 .main-content {
 	position: relative;
 	top: 30vh;
+	text-align: center;
 }
 
 // Images
 .logo {
 	width: 50vw;
-}
+	max-width: 350px;
+  }
