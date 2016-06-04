@@ -24,7 +24,8 @@ body {
   background-color: #f3f3f3;
   height: 100vh;
   min-height: 100vh;
-  position: relative; }
+  position: relative;
+  text-align: center; }
   @media (max-width: 600px) {
     .main-section {
       padding-top: 0;
@@ -34,9 +35,39 @@ body {
 
 .main-content {
   position: relative;
-  top: 30vh;
+  top: 20vh;
+  height: 80vh;
   text-align: center; }
+  @media (max-height: 630px) {
+    .main-content {
+      top: 30vh; } }
+  @media (max-width: 850px) {
+    .main-content {
+      top: 30vh; } }
 
 .logo {
   width: 50vw;
-  max-width: 350px; }
+  max-width: 320px;
+  max-height: 40vh; }
+
+.main-img {
+  width: 85vw;
+  position: absolute;
+  bottom: 0px;
+  left: 7.5%; }
+  @media (max-height: 630px) {
+    .main-img {
+      display: none; } }
+  @media (max-width: 850px) {
+    .main-img {
+      display: none; } }
+
+.btn-green {
+  background-color: #45bab3;
+  font: 1em GothamBold;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  border-radius: 50px;
+  width: 140px;
+  border: none;
+  padding: .6em 2em .6em 2em; }
