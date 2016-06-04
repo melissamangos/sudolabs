@@ -4,12 +4,17 @@ $blue: #445d64;
 $pink: #ed7a88;
 $green: #45bab3;
 $darkgrey: #3d3d3d;
+$lightgrey: #f3f3f3;
 
 // Fonts
 @font-face {
-    font-family: myFirstFont;
-    src: url();
-    font-weight: bold;
+    font-family: GothamBold;
+    src: url(../../assets/fonts/gotham-bold.ttf);
+}
+
+@font-face {
+    font-family: GothamLight;
+    src: url(../../assets/fonts/gotham-light.ttf);
 }
 
 // Body
@@ -17,4 +22,47 @@ body {
 	background: #FFF;
 	font-family: inherit;
 	font-weight: lighter;
+}
+
+// Typography
+.subtitle {
+	font: 1em GothamLight;
+	text-align: center;
+	margin-left:2em;
+	margin-right:2em;
+}
+
+
+// Sections
+@mixin contentSection($top-bottom-padding, $left-right-padding, $color, $media-top-bottom-padding, $media-left-right-padding) {
+	padding-top: $top-bottom-padding;
+    padding-bottom: $top-bottom-padding;
+    padding-left: $left-right-padding;
+    padding-right: $left-right-padding;
+    background-color: $color;
+
+    @media (max-width: 600px) {
+    	padding-top: $media-top-bottom-padding;
+    	padding-bottom: $media-top-bottom-padding;
+    	padding-left: $media-left-right-padding;
+    	padding-right: $media-left-right-padding;
+  }
+}
+
+.main-section {
+	@include contentSection(0, 0, $lightgrey, 0, 0);
+	height: 100vh;
+    min-height: 100vh;
+    position: relative;
+    text-align: center;
+}
+
+.main-content {
+	position: relative;
+	top: 30vh;
+}
+
+// Images
+.logo {
+	width: 50vw;
 }

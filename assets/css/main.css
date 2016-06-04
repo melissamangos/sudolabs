@@ -1,9 +1,42 @@
 @font-face {
-  font-family: myFirstFont;
-  src: url();
-  font-weight: bold; }
+  font-family: GothamBold;
+  src: url(../../assets/fonts/gotham-bold.ttf); }
+
+@font-face {
+  font-family: GothamLight;
+  src: url(../../assets/fonts/gotham-light.ttf); }
 
 body {
   background: #FFF;
   font-family: inherit;
   font-weight: lighter; }
+
+.subtitle {
+  font: 1em GothamLight;
+  text-align: center;
+  margin-left: 2em;
+  margin-right: 2em; }
+
+.main-section {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  background-color: #f3f3f3;
+  height: 100vh;
+  min-height: 100vh;
+  position: relative;
+  text-align: center; }
+  @media (max-width: 600px) {
+    .main-section {
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-left: 0;
+      padding-right: 0; } }
+
+.main-content {
+  position: relative;
+  top: 30vh; }
+
+.logo {
+  width: 50vw; }
