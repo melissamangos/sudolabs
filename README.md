@@ -24,13 +24,11 @@ Run <code>npm install</code> in your sudolabs folder and <code>package.json</cod
 <li>File names are in snake case (Ex. file_name)</li>
 <li>Comment code with the purpose of each section/mixin/function and a description of each argument and/or returned variables</li>
 </ul>
-<br>
 <strong>HTML/CSS</strong>
 <ul>
 <li>Class and ID are named with hyphens (Ex. class-name)</li>
 <li>h1 tags should only be used for section headers</li>
 </ul>
-<br>
 <strong>SCSS</strong>
 <ul>
 <li>Variables and mixin arguments are named with hyphens (Ex. variable-name)</li>
@@ -38,10 +36,8 @@ Run <code>npm install</code> in your sudolabs folder and <code>package.json</cod
 <li>Fonts are named in camel case (Ex. fontName)</li>
 <li>Animation names are in camel case (Ex. animationName)</li>
 </ul>
-<br>
 <strong>JavaScript</strong>
 <ul>
 <li>Variables are in snake case (Ex. variable_name)</li>
 <li>Functions are in camel case (Ex. functionName)</li>
 </ul>
-<br>
