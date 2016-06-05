@@ -33,6 +33,10 @@ body {
 	margin-right: 100% * 0.3;
 }
 
+.title {
+	font: 2em GothamBold;
+}
+
 
 // Sections
 @mixin contentSection($top-bottom-padding, $left-right-padding, $color, $media-top-bottom-padding, $media-left-right-padding) {
@@ -95,6 +99,40 @@ body {
   	}
 }
 
+.volunteer-section {
+	@include contentSection(2em, 4em, $blue, 1em, 1em);
+
+	h1 {
+		color: white;
+	}
+
+	span {
+		color: $blue;
+	}
+}
+
+.single-volunteer {
+	background-color: white;
+	border-radius: 10px;
+	padding: 1em;
+	padding-bottom: 2em;
+	margin: 1em;
+	ul {
+		display: inline-block;
+		li {
+			color: $blue;
+			font: 1.5em GothamBold;
+			display: inline-block;
+			vertical-align: bottom;
+		}
+	}
+}
+
+.volunteer-blurb {
+	padding-top: 3em;
+	padding-left: 3em;
+}
+
 // Images
 .logo {
 	width: 50vw;
@@ -117,6 +155,12 @@ body {
   	}
 }
 
+#sudo-arrow {
+	// width: 25%;
+	height: 50px;
+}
+
+
 // Buttons
 @mixin buttonStyling($bg-color, $font-color) {
 	background-color: $bg-color;
@@ -132,12 +176,6 @@ body {
 	@include buttonStyling ($green, $white);
 	max-width: 350px;
   }
-
-#sudo-arrow {
-	// width: 25%;
-	height: 50px;
-}
-
 // Bootstrap Fixes
 .container {
 	padding-left: 5px;
@@ -152,4 +190,8 @@ body {
 .navbar-default .navbar-toggle {
 	background-color: $white;
 	border: none;
+}
+
+.glyphicon-chevron-right {
+	font-size: 1em;
 }
