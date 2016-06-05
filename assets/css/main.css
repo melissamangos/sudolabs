@@ -253,19 +253,19 @@ body {
 .white {
   color: #FFFFFF; }
 
-@-webkit-keyframes fade-in {
+@-webkit-keyframes fadeIn {
   0% {
     opacity: 0; }
   100% {
     opacity: 1; } }
 
-@-moz-keyframes fade-in {
+@-moz-keyframes fadeIn {
   0% {
     opacity: 0; }
   100% {
     opacity: 1; } }
 
-@keyframes fade-in {
+@keyframes fadeIn {
   0% {
     opacity: 0; }
   100% {
@@ -282,10 +282,10 @@ body {
     transform: rotate(90deg) translate(10px, 0); }
 
 .active .volunteer-blurb {
-  -webkit-animation: fade-in 1s 0.5s 1 forwards;
-  -moz-animation: fade-in 1s 0.5s 1 forwards;
-  -o-animation: fade-in 1s 0.5s 1 forwards;
-  animation: fade-in 1s 0.5s 1 forwards; }
+  -webkit-animation: fadeIn 1s 0.5s 1 forwards;
+  -moz-animation: fadeIn 1s 0.5s 1 forwards;
+  -o-animation: fadeIn 1s 0.5s 1 forwards;
+  animation: fadeIn 1s 0.5s 1 forwards; }
 
 .change-arrow {
   width: 13px;

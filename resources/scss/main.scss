@@ -295,7 +295,7 @@ body {
   }
 }
 
-@include keyframes(fade-in) {
+@include keyframes(fadeIn) {
     0% {
         opacity: 0;
     }
@@ -333,7 +333,7 @@ body {
       }
     }
     .volunteer-blurb {
-    	@include animation(1s, 0.5s, fade-in);
+    	@include animation(1s, 0.5s, fadeIn);
     }
 }
 
