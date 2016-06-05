@@ -20,48 +20,75 @@ window.onload = function() {
 }
 
 function volunteerDrop(parent) {
+	makeActive(parent);
 	switch(parent.id) {
 		case "mentor-full":
 			if (mentor == 0) {
+				openAnimation(parent);
 				parent.appendChild(mentor_blurb);
+
 				mentor = 1;
 			} else {
+				closeAnimation(parent);
 				parent.removeChild(mentor_blurb);
 				mentor = 0;
 			}
-			removeGlyphClass("mentor-glyph");
 			break;
 		case "instructor-full":
 			if (instruc == 0) {
+				openAnimation(parent);
 				parent.appendChild(instructor_blurb);
 				instruc = 1;
 			} else {
+				closeAnimation(parent);
 				parent.removeChild(instructor_blurb);
 				instruc = 0;
 			}
-			removeGlyphClass("instructor-glyph");
 			break;
 		case "team-full":
 			if (team == 0) {
+				openAnimation(parent);
 				parent.appendChild(team_blurb);
 				team = 1;
 			} else {
+				closeAnimation(parent);
 				parent.removeChild(team_blurb);
 				team = 0;
 			}
-			removeGlyphClass("team-glyph");
 			break;
 	}
 }
 
-function removeGlyphClass(glyphID) {
-	var elem = document.getElementById(glyphID);
-	console.log(elem.classList)
-	if (elem.classList.contains("glyphicon-chevron-right")) {
-		elem.classList.remove("glyphicon-chevron-right");
-		elem.classList.add("glyphicon-chevron-down");
+function makeActive(elem) {
+	if (elem.classList.contains("active")) {
+		elem.classList.remove("active");
 	} else {
-		elem.classList.remove("glyphicon-chevron-down");
-		elem.classList.add("glyphicon-chevron-right");
+		elem.classList.add("active");
 	}
+}
+
+function openAnimation(elem) {
+    var height = 42;
+    var id = setInterval(frame, 3);
+    function frame() {
+        if (height == 150) {
+            clearInterval(id);
+        } else {
+            height++; 
+            elem.style.height = height + 'px'; 
+        }
+    }
+}
+
+function closeAnimation(elem) {
+    var height = 150;
+    var id = setInterval(frame, 3);
+    function frame() {
+        if (height == 42) {
+            clearInterval(id);
+        } else {
+            height-- 
+            elem.style.height = height + 'px'; 
+        }
+    }
 }

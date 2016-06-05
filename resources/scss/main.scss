@@ -9,13 +9,13 @@ $white: #FFFFFF;
 
 // Fonts
 @font-face {
-    font-family: GothamBold;
-    src: url(../../assets/fonts/gotham-bold.ttf);
+	font-family: GothamBold;
+	src: url(../../assets/fonts/gotham-bold.ttf);
 }
 
 @font-face {
-    font-family: GothamLight;
-    src: url(../../assets/fonts/gotham-light.ttf);
+	font-family: GothamLight;
+	src: url(../../assets/fonts/gotham-light.ttf);
 }
 
 // Body
@@ -23,7 +23,7 @@ body {
 	background: #FFF;
 	font-family: inherit;
 	font-weight: lighter;
-	padding-top: 51px;
+	padding-top: 50px;
 }
 
 // Typography
@@ -93,18 +93,18 @@ body {
 // Sections
 @mixin contentSection($top-bottom-padding, $left-right-padding, $color, $media-top-bottom-padding, $media-left-right-padding, $Ytranslation) {
 	padding-top: $top-bottom-padding;
-    padding-bottom: $top-bottom-padding;
-    padding-left: $left-right-padding;
-    padding-right: $left-right-padding;
-    background-color: $color;
-    transform: translateY($Ytranslation);
+	padding-bottom: $top-bottom-padding;
+	padding-left: $left-right-padding;
+	padding-right: $left-right-padding;
+	background-color: $color;
+	transform: translateY($Ytranslation);
 
-    @media (max-width: 600px) {
-    	padding-top: $media-top-bottom-padding;
-    	padding-bottom: $media-top-bottom-padding;
-    	padding-left: $media-left-right-padding;
-    	padding-right: $media-left-right-padding;
-  }
+	@media (max-width: 600px) {
+		padding-top: $media-top-bottom-padding;
+		padding-bottom: $media-top-bottom-padding;
+		padding-left: $media-left-right-padding;
+		padding-right: $media-left-right-padding;
+	}
 }
 
 .nav-section {
@@ -128,10 +128,10 @@ body {
 .main-section {
 	@include contentSection(0, 0, $lightgrey, 0, 0, -50px);
 	height: 100vh;
-    min-height: 100vh;
-    position: relative;
-    text-align: center;
-    z-index: -1;
+	min-height: 100vh;
+	position: relative;
+	text-align: center;
+	z-index: -1;
 }
 
 .main-content {
@@ -141,25 +141,16 @@ body {
 	text-align: center;
 
 	@media (max-height: 630px) {
-    	top: 30vh;
-  	}
+		top: 30vh;
+	}
 
-  	@media (max-width: 850px) {
-  		top: 30vh;
-  	}
+	@media (max-width: 850px) {
+		top: 30vh;
+	}
 }
 
-
 .volunteer-section {
-	@include contentSection(2em, 4em, $blue, 1em, 1em);
-
-	h1 {
-		color: white;
-	}
-
-	span {
-		color: $blue;
-	}
+	@include contentSection(5em, 6.5em, $blue, 1em, 3em, -51px);
 }
 
 .single-volunteer {
@@ -182,6 +173,8 @@ body {
 .volunteer-blurb {
 	padding-top: 3em;
 	padding-left: 3em;
+	opacity: 0;
+}
 
 .about-section {
 	@include contentSection(5em, 6.5em, $pink, 1em, 3em, -51px);
@@ -197,21 +190,21 @@ body {
 	width: 50vw;
 	max-width: 420px;
 	max-height: 40vh;
-  }
+}
 
 .main-img {
 	width: 85vw;
 	position: absolute;
 	bottom: 0px;
-    left: 15% * .5;
+	left: 15% * .5;
 
-    @media (max-height: 630px) {
-    	display: none;
-  	}
+	@media (max-height: 630px) {
+		display: none;
+	}
 
-  	@media (max-width: 850px) {
-  		display: none;
-  	}
+	@media (max-width: 850px) {
+		display: none;
+	}
 }
 
 #sudo-arrow {
@@ -222,6 +215,7 @@ body {
 	width: 80%;
 	max-width: 480px;
 }
+
 // Buttons
 @mixin buttonStyling($bg-color, $font-color) {
 	background-color: $bg-color;
@@ -238,8 +232,8 @@ body {
 .btn-green {
 	@include buttonStyling ($green, $white);
 	max-width: 350px;
-  }
 }
+
 // Bootstrap Fixes
 .container {
 	padding-left: 5px;
@@ -264,11 +258,11 @@ body {
 	padding: 0;
 
 	@media (min-width: 1200px) {
-    	width: 100%;
+		width: 100%;
 	}
 
 	@media (min-width: 768px) {
-    	width: 100%;
+		width: 100%;
 	}
 }
 
@@ -279,3 +273,108 @@ body {
 
 .white {
 	color: $white;
+}
+
+// Animations
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@include keyframes(fade-in) {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@mixin animation ($duration, $delay, $animation) {
+    -webkit-animation: $animation $duration $delay 1 forwards;
+
+    -moz-animation: $animation $duration $delay 1 forwards;
+
+    -o-animation: $animation $duration $delay 1 forwards;
+    
+    animation: $animation $duration $delay 1 forwards;
+}
+
+// CodePen Stuff
+
+.active {
+    .change-arrow {
+      -webkit-transform: rotate(45deg) translate(-5px, -5px);
+      transform: rotate(45deg) translate(-5px, -5px);
+
+      &:before {
+        -webkit-transform: translate(10px, 0);
+        transform: translate(10px, 0);
+      }
+
+      &:after {
+        -webkit-transform: rotate(90deg) translate(10px, 0);
+        transform: rotate(90deg) translate(10px, 0);
+      }
+    }
+    .volunteer-blurb {
+    	@include animation(2s, 0.5s, fade-in);
+    }
+}
+
+.change-arrow {
+  width: 13px;
+  height: 13px;
+  display: inline-block;
+  position: relative;
+  bottom: -5px;
+  left: -10px;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  margin-top: 2px;
+  text-align: left;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  float: right;
+
+  &:before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 3px;
+    background-color: $blue;
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+  }
+
+  &:after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 3px;
+    background-color: $blue;
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+    position: absolute;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    top: -5px;
+    left: 5px;
+  }
+}
+
+.click-text {
+  -webkit-transition: 0.15s ease;
+  transition: 0.15s ease;
+}
