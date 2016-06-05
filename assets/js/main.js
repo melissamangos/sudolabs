@@ -19,31 +19,49 @@ window.onload = function() {
 	team_blurb.parentNode.removeChild(team_blurb);
 }
 
-function volunteerDrop(section) {
-	switch(section) {
+function volunteerDrop(parent) {
+	switch(parent.id) {
 		case "mentor-full":
 			if (mentor == 0) {
-				document.getElementById(section).appendChild(mentor_blurb);
+				parent.appendChild(mentor_blurb);
 				mentor = 1;
 			} else {
-				document.getElementById(section).removeChild(mentor_blurb);
+				parent.removeChild(mentor_blurb);
 				mentor = 0;
-			};
+			}
+			removeGlyphClass("mentor-glyph");
+			break;
 		case "instructor-full":
 			if (instruc == 0) {
-				document.getElementById(section).appendChild(instructor_blurb);
+				parent.appendChild(instructor_blurb);
 				instruc = 1;
 			} else {
-				document.getElementById(section).removeChild(instructor_blurb);
+				parent.removeChild(instructor_blurb);
 				instruc = 0;
-			};
+			}
+			removeGlyphClass("instructor-glyph");
+			break;
 		case "team-full":
-			if (instruc == 0) {
-				document.getElementById(section).appendChild(team_blurb);
+			if (team == 0) {
+				parent.appendChild(team_blurb);
 				team = 1;
 			} else {
-				document.getElementById(section).removeChild(team_blurb);
+				parent.removeChild(team_blurb);
 				team = 0;
-			};
+			}
+			removeGlyphClass("team-glyph");
+			break;
+	}
+}
+
+function removeGlyphClass(glyphID) {
+	var elem = document.getElementById(glyphID);
+	console.log(elem.classList)
+	if (elem.classList.contains("glyphicon-chevron-right")) {
+		elem.classList.remove("glyphicon-chevron-right");
+		elem.classList.add("glyphicon-chevron-down");
+	} else {
+		elem.classList.remove("glyphicon-chevron-down");
+		elem.classList.add("glyphicon-chevron-right");
 	}
 }
