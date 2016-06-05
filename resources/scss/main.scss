@@ -175,6 +175,7 @@ body {
 	padding-top: 3em;
 	padding-left: 3em;
 	opacity: 0;
+	height: 0px;
 }
 
 .about-section {
@@ -239,6 +240,10 @@ body {
 .container {
 	padding-left: 5px;
 	padding-right: 5px;
+}
+
+.navbar-default {
+	border: none;
 }
 
 .navbar-brand {
@@ -328,7 +333,7 @@ body {
       }
     }
     .volunteer-blurb {
-    	@include animation(2s, 0.5s, fade-in);
+    	@include animation(1s, 0.5s, fade-in);
     }
 }
 
