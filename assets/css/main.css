@@ -150,6 +150,7 @@ body {
       vertical-align: bottom; }
 
 .volunteer-blurb {
+  vertical-align: middle;
   padding-top: 3em;
   padding-left: 3em;
   opacity: 0; }

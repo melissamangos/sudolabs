@@ -71,7 +71,7 @@ function openAnimation(elem) {
     var height = 42;
     var id = setInterval(frame, 3);
     function frame() {
-        if (height == 150) {
+        if (height == 175) {
             clearInterval(id);
         } else {
             height++; 
@@ -81,7 +81,7 @@ function openAnimation(elem) {
 }
 
 function closeAnimation(elem) {
-    var height = 150;
+    var height = 175;
     var id = setInterval(frame, 3);
     function frame() {
         if (height == 42) {
