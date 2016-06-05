@@ -28,23 +28,76 @@ body {
 
 // Typography
 .subtitle {
-	font: 1em GothamLight;
+	font: 1.3em GothamLight;
 	margin-left: 100% * 0.3;
 	margin-right: 100% * 0.3;
 }
 
-.title {
-	font: 2em GothamBold;
+@mixin titles($font-color) {
+	font: 4em GothamBold;
+	color: $font-color;
+	padding-bottom: .5em;
+	margin-bottom: .5em;
+	text-transform: uppercase;
 }
 
+.dark-title {
+	@include titles($darkgrey);
+	position: relative;
+}
+
+.light-title {
+	@include titles($white);
+	position: relative;
+}
+
+@mixin underline($color) {
+	content: "";
+	background: $color; 
+	position: absolute; 
+	bottom: 0; 
+	left: 0; 
+	height: 8px; 
+	width: 70px;
+}
+
+.light-title:after {
+	@include underline($white);
+}
+
+.dark-title:after {
+	@include underline($darkgrey);
+}
+
+.date {
+	text-transform: uppercase;
+	font-size: 2.3em;
+	font-weight: bold;
+	letter-spacing: -.05em;
+	color: $white;
+	line-height: 2.1em;
+}
+
+#number {
+	font-size: 4em;
+}
+
+.event-title {
+	text-transform: uppercase;
+	font-size: 2em;
+	font-weight: bold;
+	letter-spacing: -.02em;
+	color: $white;
+}
 
 // Sections
-@mixin contentSection($top-bottom-padding, $left-right-padding, $color, $media-top-bottom-padding, $media-left-right-padding) {
+@mixin contentSection($top-bottom-padding, $left-right-padding, $color, $media-top-bottom-padding, $media-left-right-padding, $Ytranslation) {
 	padding-top: $top-bottom-padding;
     padding-bottom: $top-bottom-padding;
     padding-left: $left-right-padding;
     padding-right: $left-right-padding;
     background-color: $color;
+    transform: translateY($Ytranslation);
 
     @media (max-width: 600px) {
     	padding-top: $media-top-bottom-padding;
@@ -55,16 +108,12 @@ body {
 }
 
 .nav-section {
-	@include contentSection(0, 0, $blue, 0, 0);
+	@include contentSection(0, 0, $blue, 0, 0,0);
 	ul {
 		li {
-			// vertical-align: bottom;
-			// display: inline-block;	
 			text-decoration: none;
 			font: 1em GothamBold;
 			color: white;	
-			// margin-left: 1em;
-			// margin-right: 1em;
 			a {
 				text-decoration: none !important;
 				color: white !important;
@@ -77,11 +126,12 @@ body {
 }
 
 .main-section {
-	@include contentSection(0, 0, $lightgrey, 0, 0);
+	@include contentSection(0, 0, $lightgrey, 0, 0, -50px);
 	height: 100vh;
     min-height: 100vh;
     position: relative;
     text-align: center;
+    z-index: -1;
 }
 
 .main-content {
@@ -98,6 +148,7 @@ body {
   		top: 30vh;
   	}
 }
+
 
 .volunteer-section {
 	@include contentSection(2em, 4em, $blue, 1em, 1em);
@@ -131,12 +182,20 @@ body {
 .volunteer-blurb {
 	padding-top: 3em;
 	padding-left: 3em;
+
+.about-section {
+	@include contentSection(5em, 6.5em, $pink, 1em, 3em, -51px);
+}
+
+.events-section {
+	@include contentSection(5em, 6.5em, $green, 1em, 3em, -51px);
+
 }
 
 // Images
 .logo {
 	width: 50vw;
-	max-width: 320px;
+	max-width: 420px;
 	max-height: 40vh;
   }
 
@@ -156,11 +215,13 @@ body {
 }
 
 #sudo-arrow {
-	// width: 25%;
 	height: 50px;
 }
 
-
+.about-img {
+	width: 80%;
+	max-width: 480px;
+}
 // Buttons
 @mixin buttonStyling($bg-color, $font-color) {
 	background-color: $bg-color;
@@ -171,11 +232,14 @@ body {
 	width: 140px;
 	border: none;
 	padding: .6em 2em .6em 2em;
+	max-width: 350px;
 }
+
 .btn-green {
 	@include buttonStyling ($green, $white);
 	max-width: 350px;
   }
+}
 // Bootstrap Fixes
 .container {
 	padding-left: 5px;
@@ -195,3 +259,23 @@ body {
 .glyphicon-chevron-right {
 	font-size: 1em;
 }
+
+.container-adjustment {
+	padding: 0;
+
+	@media (min-width: 1200px) {
+    	width: 100%;
+	}
+
+	@media (min-width: 768px) {
+    	width: 100%;
+	}
+}
+
+// Utilities
+.center {
+	text-align: center;
+}
+
+.white {
+	color: $white;
