@@ -198,17 +198,19 @@ body {
       padding-bottom: 1em;
       padding-left: 3em;
       padding-right: 3em; } }
-  .workshop-section .single-workshop {
-    display: table-cell;
-    height: auto;
-    vertical-align: bottom;
-    width: 30vw;
-    text-align: center;
-    padding: 1em 2em 1em 2em;
-    border: 1px black solid;
-    border-spacing: 0px; }
-    .workshop-section .single-workshop div {
-      display: block; }
+
+.single-workshop {
+  display: table-cell;
+  height: auto;
+  vertical-align: bottom;
+  width: 30vw;
+  text-align: center;
+  padding: 1em 2em 1em 2em;
+  border: 1px black solid;
+  border-spacing: 0px; }
+  .single-workshop div {
+    padding-top: 1em;
+    padding-bottom: 1em; }
 
 .logo {
   width: 50vw;

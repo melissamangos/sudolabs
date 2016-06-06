@@ -190,19 +190,22 @@ body {
 .workshop-section {
 	@include contentSection(5em, 6.5em, $lightgrey, 1em, 3em, -51px);
 	border-spacing: 2em;
-	.single-workshop {
-		display: table-cell;
-		height: auto;
-		vertical-align: bottom;
-		width: 30vw;
-		text-align: center;
-		padding: 1em 2em 1em 2em;
-		border: 1px black solid;
-		border-spacing: 0px;
+}
 
-		div {
-			display: block;
-		}
+
+.single-workshop {
+	display: table-cell;
+	height: auto;
+	vertical-align: bottom;
+	width: 30vw;
+	text-align: center;
+	padding: 1em 2em 1em 2em;
+	border: 1px black solid;
+	border-spacing: 0px;
+
+	div {
+		padding-top: 1em;
+		padding-bottom: 1em;
 	}
 }
 
