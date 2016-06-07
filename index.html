@@ -93,7 +93,7 @@ oh meybe that should be in about.. or maybe something more srs should be in abou
 
 			<table class="event">
 				<tr>
-					<td class="vertical-align-top padding-right-3">
+					<td class="padding-right-3">
 						<div class="date">
 							JUNE<br>
 							<span id="number">04</span>
@@ -131,7 +131,7 @@ oh meybe that should be in about.. or maybe something more srs should be in abou
 
 			<table class="event">
 				<tr>
-					<td class="vertical-align-top padding-right-3">
+					<td class="padding-right-3">
 						<div class="date">
 							JUNE<br>
 							<span id="number">04</span>
@@ -169,7 +169,7 @@ oh meybe that should be in about.. or maybe something more srs should be in abou
 
 			<table class="event">
 				<tr>
-					<td class="vertical-align-top padding-right-3">
+					<td class="padding-right-3">
 						<div class="date">
 							JUNE<br>
 							<span id="number">04</span>
@@ -217,6 +217,7 @@ oh meybe that should be in about.. or maybe something more srs should be in abou
 			SPONSOR US
 		</button>
 	</section>
+
 	<section class="workshop-section" id="workshops">
 		<div class="container container-adjustment max-width">
 			<div class="title">
@@ -225,27 +226,32 @@ oh meybe that should be in about.. or maybe something more srs should be in abou
 				<!-- <img src="">  ICON THINGY		 -->
 			</div>	
 			<div class="workshop list">
-				<div class="single-workshop">
-					<div>
-						<!-- <img src="">  WORKSHOP IMAGE-->
-					</div>
-					<div>
-						<h3>INTRO TO WEB DEV</h3>
-						<div class="workshop-blurb">
-							Dis workshop will teach you the HTML and CSS necessary for creating an online resume. Wow!
+				<div class="single-workshop" id="workshop-left">
+					<div class="original-text">
+						<div>
+							<!-- <img src="">  WORKSHOP IMAGE-->
 						</div>
 						<div>
-							1-2 hrs
+							<h3>INTRO TO WEB DEV</h3>
+							<div class="workshop-blurb">
+								Dis workshop will teach you the HTML and CSS necessary for creating an online resume. Wow!
+							</div>
+							<div>
+								1-2 hrs
+							</div>
+						</div>
+						<div>
+							<button class="btn-pink" onclick="extendWorkshop(this.parentNode.parentNode);">
+								<!-- data-toggle="modal" data-target="#myModal" -->
+								MORE INFO
+							</button>
 						</div>
 					</div>
-					<div>
-						<button type="button" class="btn-pink">
-							<!-- data-toggle="modal" data-target="#myModal" -->
-							MORE INFO
-						</button>
+					<div class="hidden-workshop collapse" id="hidden-left">
+						This workshop bleep bloop blop download stuff here hehe
 					</div>
 				</div>
-				<div class="single-workshop">
+				<div class="single-workshop" id="workshop-middle">
 					<div>
 						<!-- <img src="">  WORKSHOP IMAGE-->
 					</div>
@@ -264,8 +270,11 @@ oh meybe that should be in about.. or maybe something more srs should be in abou
 							MORE INFO
 						</button>
 					</div>
+					<div class="hidden-workshop" id="hidden-middle">
+						
+					</div>
 				</div>
-				<div class="single-workshop">
+				<div class="single-workshop" id="workshop-right">
 					<div>
 						<!-- <img src="">  WORKSHOP IMAGE-->
 					</div>
@@ -284,6 +293,9 @@ oh meybe that should be in about.. or maybe something more srs should be in abou
 							MORE INFO
 						</button>
 					</div>
+					<div class="hidden-workshop" id="hidden-right">
+						
+					</div>
 				</div>
 			</div>
 		</div>
@@ -296,44 +308,44 @@ oh meybe that should be in about.. or maybe something more srs should be in abou
 				<!-- <img src="">  ICON THINGY		 -->
 			</div>	
 			<div class="single-volunteer" id="mentor-full" onclick="volunteerDrop(this);" >
-
-					<div class="click-text">
-						<ul class="pull-left">
-							<li><!-- ICONs here <img src="" alt=""> --></li>
-							<li>VOLUNTEER MENTORS</li>
-						</ul>
-						<span class="change-arrow"></span>
-					</div>
-					<div id="mentors" class="volunteer-blurb">
-						All of our workshops are possible due to our volunteer mentors. If you have experience and are passionate about programming, come help us build our community by sharing what you know with the women of Kingston. Subscribe to our mentor email list here. <!-- LINK TO SOMETHING -->
-					</div>
+				<div class="click-text">
+					<ul class="pull-left">
+						<li><!-- ICONs here <img src="" alt=""> --></li>
+						<li>VOLUNTEER MENTORS</li>
+					</ul>
+					<span class="change-arrow"></span>
 				</div>
-				<div class="single-volunteer" id="instructor-full" onclick="volunteerDrop(this);">
-					<div class="click-text">
-						<ul class="pull-left">
-							<li><!-- ICONs here <img src="" alt=""> --></li>
-							<li>INSTRUCTORS</li>
-						</ul>
-						<span class="change-arrow"></span>
-					</div>
-					<div id="instructors" class="volunteer-blurb">
-						For each workshop, we look for passionate, skilled, and inspiring Kingstonians to share their knowledge with our Sudoers. The workshop instructors teach, inspire, and help us shape our collaborative and welcoming community. To apply, send us your resume and a short paragraph about yourself and your experience to melissa@sudolabs.ca
-					</div>
-				</div>
-				<div class="single-volunteer" id="team-full" onclick="volunteerDrop(this);">
-					<div class="click-text">
-						<ul class="pull-left">
-							<li><!-- ICONs here <img src="" alt=""> --></li>
-							<li>JOIN OUR TEAM</li>
-						</ul>
-						<span class="change-arrow"></span>
-					</div>
-					<div id="team" class="volunteer-blurb">
-						Want to get more involved in the Sudo community? We're always looking for more passionate and innovative individuals within the Kingston community to support and work alongside our team. On our team, you can assist with creating website content, marketing Sudo over social media, or even planning the monthly events. To apply, send us your resume and a short paragraph about yourself and your experience to melissa@sudolabs.ca
-					</div>
+				<div id="mentors" class="volunteer-blurb">
+					All of our workshops are possible due to our volunteer mentors. If you have experience and are passionate about programming, come help us build our community by sharing what you know with the women of Kingston. Subscribe to our mentor email list here. <!-- LINK TO SOMETHING -->
 				</div>
 			</div>
+			<div class="single-volunteer" id="instructor-full" onclick="volunteerDrop(this);">
+				<div class="click-text">
+					<ul class="pull-left">
+						<li><!-- ICONs here <img src="" alt=""> --></li>
+						<li>INSTRUCTORS</li>
+					</ul>
+					<span class="change-arrow"></span>
+				</div>
+				<div id="instructors" class="volunteer-blurb">
+					For each workshop, we look for passionate, skilled, and inspiring Kingstonians to share their knowledge with our Sudoers. The workshop instructors teach, inspire, and help us shape our collaborative and welcoming community. To apply, send us your resume and a short paragraph about yourself and your experience to melissa@sudolabs.ca
+				</div>
+			</div>
+			<div class="single-volunteer" id="team-full" onclick="volunteerDrop(this);">
+				<div class="click-text">
+					<ul class="pull-left">
+						<li><!-- ICONs here <img src="" alt=""> --></li>
+						<li>JOIN OUR TEAM</li>
+					</ul>
+					<span class="change-arrow"></span>
+				</div>
+				<div id="team" class="volunteer-blurb">
+					Want to get more involved in the Sudo community? We're always looking for more passionate and innovative individuals within the Kingston community to support and work alongside our team. On our team, you can assist with creating website content, marketing Sudo over social media, or even planning the monthly events. To apply, send us your resume and a short paragraph about yourself and your experience to melissa@sudolabs.ca
+				</div>
+			</div>
+		</div>
 	</section>
+
 	<section class="contact-section" id="contact">
 		<div class="title">
 			<!-- <img src="">  ICON THINGY		 -->

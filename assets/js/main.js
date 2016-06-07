@@ -92,3 +92,21 @@ function closeAnimation(elem) {
         }
     }
 }
+
+function extendWorkshop(elem) {
+	openWorkshop(elem);
+
+}
+
+function openWorkshop(elem) {
+	var width = 30;
+	var id = setInterval(frame, 10);
+	function frame() {
+		if (width == 70) {
+			clearInterval(id);
+		} else {
+			width++;
+			elem.style.width = width + "vw";
+		}
+	}
+}

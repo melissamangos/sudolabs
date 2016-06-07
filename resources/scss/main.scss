@@ -87,13 +87,8 @@ body {
 }
 
 .event-title {
-	// text-transform: uppercase;
-	// font-size: 2em;
-	// font-weight: bold;
-	// letter-spacing: -.02em;
-	// color: $white;
 	text-transform: uppercase;
-	font-size: 2.3em;
+	font-size: 1.7em;
 	font-weight: bold;
 	letter-spacing: -.05em;
 	color: $white;
@@ -214,10 +209,14 @@ table.event {
 .workshop-section {
 	@include contentSection($lightgrey, -51px);
 	border-spacing: 2em;
+	width: 100vw;
+	margin: 0 auto;
 }
 
-.single-workshop {
-	display: table-cell;
+.single-workshop {	
+	display: flex;
+	align-items: stretch;
+	flex-wrap: wrap;
 	height: auto;
 	vertical-align: bottom;
 	width: 30vw;
@@ -231,6 +230,18 @@ table.event {
 		padding-bottom: 1em;
 	}
 }
+
+.original-text {
+	width: 30vw;
+}
+
+.hidden-workshop {
+	display: table-cell;
+	width: 30vw;
+	visibility: hidden;
+	width: 0px;
+}
+
 
 // Images
 .logo {
@@ -336,10 +347,6 @@ table.event {
 
 .max-width {
 	max-width: 1080px;
-}
-
-.vertical-align-top {
-	vertical-align: top;
 }
 
 .padding-right-3 {
