@@ -236,6 +236,11 @@ body {
 	max-width: 350px;
 }
 
+.btn-white {
+	@include buttonStyling ($white, $green);
+	max-width: 350px;
+}
+
 // Bootstrap Fixes
 .container {
 	padding-left: 5px;
