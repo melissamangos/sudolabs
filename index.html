@@ -167,27 +167,32 @@ oh meybe that should be in about.. or maybe something more srs should be in abou
 			<!-- <img src="">  ICON THINGY		 -->
 		</div>	
 		<div class="workshop list">
-			<div class="single-workshop">
-				<div>
-					<!-- <img src="">  WORKSHOP IMAGE-->
-				</div>
-				<div>
-					<h3>INTRO TO WEB DEV</h3>
-					<div class="workshop-blurb">
-						Dis workshop will teach you the HTML and CSS necessary for creating an online resume. Wow!
+			<div class="single-workshop" id="workshop-left">
+				<div class="original-text">
+					<div>
+						<!-- <img src="">  WORKSHOP IMAGE-->
 					</div>
 					<div>
-						1-2 hrs
+						<h3>INTRO TO WEB DEV</h3>
+						<div class="workshop-blurb">
+							Dis workshop will teach you the HTML and CSS necessary for creating an online resume. Wow!
+						</div>
+						<div>
+							1-2 hrs
+						</div>
+					</div>
+					<div>
+						<button class="btn-pink" onclick="extendWorkshop(this.parentNode.parentNode);">
+							<!-- data-toggle="modal" data-target="#myModal" -->
+							MORE INFO
+						</button>
 					</div>
 				</div>
-				<div>
-					<button type="button" class="btn-pink">
-						<!-- data-toggle="modal" data-target="#myModal" -->
-						MORE INFO
-					</button>
+				<div class="hidden-workshop collapse" id="hidden-left">
+					This workshop bleep bloop blop download stuff here hehe
 				</div>
 			</div>
-			<div class="single-workshop">
+			<div class="single-workshop" id="workshop-middle">
 				<div>
 					<!-- <img src="">  WORKSHOP IMAGE-->
 				</div>
@@ -206,8 +211,11 @@ oh meybe that should be in about.. or maybe something more srs should be in abou
 						MORE INFO
 					</button>
 				</div>
+				<div class="hidden-workshop" id="hidden-middle">
+					
+				</div>
 			</div>
-			<div class="single-workshop">
+			<div class="single-workshop" id="workshop-right">
 				<div>
 					<!-- <img src="">  WORKSHOP IMAGE-->
 				</div>
@@ -225,6 +233,9 @@ oh meybe that should be in about.. or maybe something more srs should be in abou
 						<!-- data-toggle="modal" data-target="#myModal" -->
 						MORE INFO
 					</button>
+				</div>
+				<div class="hidden-workshop" id="hidden-right">
+					
 				</div>
 			</div>
 		</div>

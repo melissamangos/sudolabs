@@ -190,11 +190,15 @@ body {
 .workshop-section {
 	@include contentSection(5em, 6.5em, $lightgrey, 1em, 3em, -51px);
 	border-spacing: 2em;
+	width: 100vw;
+	margin: 0 auto;
 }
 
 
-.single-workshop {
-	display: table-cell;
+.single-workshop {	
+	display: flex;
+	align-items: stretch;
+	flex-wrap: wrap;
 	height: auto;
 	vertical-align: bottom;
 	width: 30vw;
@@ -207,6 +211,17 @@ body {
 		padding-top: 1em;
 		padding-bottom: 1em;
 	}
+}
+
+.original-text {
+	width: 30vw;
+}
+
+.hidden-workshop {
+	display: table-cell;
+	width: 30vw;
+	visibility: hidden;
+	width: 0px;
 }
 
 // Images

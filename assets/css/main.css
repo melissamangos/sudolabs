@@ -191,7 +191,9 @@ body {
   padding-right: 6.5em;
   background-color: #f3f3f3;
   transform: translateY(-51px);
-  border-spacing: 2em; }
+  border-spacing: 2em;
+  width: 100vw;
+  margin: 0 auto; }
   @media (max-width: 600px) {
     .workshop-section {
       padding-top: 1em;
@@ -200,7 +202,9 @@ body {
       padding-right: 3em; } }
 
 .single-workshop {
-  display: table-cell;
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
   height: auto;
   vertical-align: bottom;
   width: 30vw;
@@ -211,6 +215,15 @@ body {
   .single-workshop div {
     padding-top: 1em;
     padding-bottom: 1em; }
+
+.original-text {
+  width: 30vw; }
+
+.hidden-workshop {
+  display: table-cell;
+  width: 30vw;
+  visibility: hidden;
+  width: 0px; }
 
 .logo {
   width: 50vw;
