@@ -225,14 +225,18 @@ table.event {
 	font-size: 2em;
 	line-height: 60px;
 	font-weight: bold;
-	// transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
 
 	transition: all 0.7s $easer;
+	-webkit-transition: all 0.7s $easer;
 
 	.expand {
-		// transform: rotate(90deg);
+		transform: rotate(90deg);
+		-webkit-transform: rotate(90deg);
 
 		transition: all 0.5s $easer;
+		-webkit-transition: all 0.5s $easer;
 	}
 }
 
@@ -243,7 +247,7 @@ table.event {
 	// right: 0;
 	// top: 5vh;	
 	background-color: $pink;
-	border-radius: 5%;
+	border-radius:10px;
 	width: 60px;
 	max-width: 60px;
 	height: 60px;
@@ -256,15 +260,21 @@ table.event {
 				max-width 0.2s $easer 0.35s, 
 				width 0.2s $easer 0.35s;
 
+	-webkit-transition: all 0.2s 0.45s,
+				height 0.2s $easer 0.25s, 
+				max-width 0.2s $easer 0.35s, 
+				width 0.2s $easer 0.35s;
+
 	&.expand {
-		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.17);
-		border-radius: 0;
-		width: 80%;
+		// box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.17);
+		border-radius: 10px;
+		width: 30vw;
 		height: 500px;
 		max-width: 600px;
 		padding: 0;
 
 		transition: all 0.2s, max-width 0.2s $easer 0.1s, height 0.3s ease 0.25s;
+		-webkit-transition: all 0.2s, max-width 0.2s $easer 0.1s, height 0.3s ease 0.25s;
 	}
 }
 
@@ -276,13 +286,16 @@ table.event {
 	text-align: left;
 
 	transition: transform 0.2s $easer, opacity 0.2s 0.2s;
+	-webkit-transition: transform 0.2s $easer, opacity 0.2s 0.2s;
 }
 
 .expand {
 	.workshop-content {
 		transform: translateY(0px);
+		-webkit-transform: translateY(0px);
 		opacity: 1;
 		transition: transform 0.7s $easer 0.05s, opacity 0s;
+		-webkit-transition: transform 0.7s $easer 0.05s, opacity 0s;
 	}
 }
 
@@ -296,18 +309,19 @@ table.event {
 
 .workshop-content {
 	.workshop-body {
-		// color: ;
+		// color: $lightgrey;
 		// color: rgba(0, 0, 0, 0.87);
-		background-color: $lightgrey;
+		background-color: white;
 		width: 100%;
 		height: 100%;
-		padding: 1em 2em 1em 2em ;
+		padding: 2em 2em 1em 2em ;
 		box-sizing: border-box;
 	}
 }
 
 .action-bar {
 	padding-left: 15px;
+	margin-top: 2em;
 	border-top: 1px solid #E0E0E0;
 	width: 100%;
 }
@@ -316,6 +330,7 @@ table.event {
 		text-transform: uppercase;
 		line-height: 52px;
 		color: $blue;
+		margin-right: 1em;
 	}
 }
 // .single-workshop {	
