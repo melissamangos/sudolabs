@@ -37,6 +37,7 @@ body {
 	font: 4em GothamBold;
 	color: $font-color;
 	padding-bottom: .5em;
+	margin-top: 0;
 	margin-bottom: .5em;
 	text-transform: uppercase;
 }
@@ -69,6 +70,8 @@ body {
 	@include underline($darkgrey);
 }
 
+// Events Formatting
+
 .date {
 	text-transform: uppercase;
 	font-size: 2.3em;
@@ -76,6 +79,7 @@ body {
 	letter-spacing: -.05em;
 	color: $white;
 	line-height: 2.1em;
+	vertical-align: top;
 }
 
 #number {
@@ -83,32 +87,52 @@ body {
 }
 
 .event-title {
+	// text-transform: uppercase;
+	// font-size: 2em;
+	// font-weight: bold;
+	// letter-spacing: -.02em;
+	// color: $white;
 	text-transform: uppercase;
-	font-size: 2em;
+	font-size: 2.3em;
 	font-weight: bold;
-	letter-spacing: -.02em;
+	letter-spacing: -.05em;
 	color: $white;
+	line-height: 1em;
+	margin: 0;
+}
+
+.event-info {
+	vertical-align: top;
+}
+
+.event-details {
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+	width: 100%;
+}
+
+.event-label {
+	font-weight: bold;
+}
+
+table.event {
+	max-width: 700px;
+	margin-bottom: 5em;
+	margin-left:auto; 
+    margin-right:auto;
+    margin-top: 5em;
 }
 
 // Sections
-@mixin contentSection($top-bottom-padding, $left-right-padding, $color, $media-top-bottom-padding, $media-left-right-padding, $Ytranslation) {
-	padding-top: $top-bottom-padding;
-	padding-bottom: $top-bottom-padding;
-	padding-left: $left-right-padding;
-	padding-right: $left-right-padding;
+@mixin contentSection($color, $Ytranslation) {
 	background-color: $color;
 	transform: translateY($Ytranslation);
-
-	@media (max-width: 600px) {
-		padding-top: $media-top-bottom-padding;
-		padding-bottom: $media-top-bottom-padding;
-		padding-left: $media-left-right-padding;
-		padding-right: $media-left-right-padding;
-	}
+	padding: 5vw;
 }
 
 .nav-section {
-	@include contentSection(0, 0, $blue, 0, 0,0);
+	@include contentSection($blue, 0);
+	padding: 0;
 	ul {
 		li {
 			text-decoration: none;
@@ -126,7 +150,7 @@ body {
 }
 
 .main-section {
-	@include contentSection(0, 0, $lightgrey, 0, 0, -50px);
+	@include contentSection($lightgrey, -50px);
 	height: 100vh;
 	min-height: 100vh;
 	position: relative;
@@ -150,7 +174,7 @@ body {
 }
 
 .volunteer-section {
-	@include contentSection(5em, 6.5em, $blue, 1em, 3em, -51px);
+	@include contentSection($blue, -51px);
 }
 
 .single-volunteer {
@@ -179,17 +203,39 @@ body {
 }
 
 .about-section {
-	@include contentSection(5em, 6.5em, $pink, 1em, 3em, -51px);
+	@include contentSection($pink, -51px);
 }
 
 .events-section {
-	@include contentSection(5em, 6.5em, $green, 1em, 3em, -51px);
+	@include contentSection($green, -51px);
 
+}
+
+.workshop-section {
+	@include contentSection($lightgrey, -51px);
+	border-spacing: 2em;
+}
+
+.single-workshop {
+	display: table-cell;
+	height: auto;
+	vertical-align: bottom;
+	width: 30vw;
+	text-align: center;
+	padding: 1em 2em 1em 2em;
+	border: 1px black solid;
+	border-spacing: 0px;
+
+	div {
+		padding-top: 1em;
+		padding-bottom: 1em;
+	}
 }
 
 // Images
 .logo {
 	width: 50vw;
+	height: auto;
 	max-width: 420px;
 	max-height: 40vh;
 }
@@ -225,7 +271,7 @@ body {
 	color: $font-color;
 	text-transform: uppercase;
 	border-radius: 50px;
-	width: 140px;
+	width: 150px;
 	border: none;
 	padding: .6em 2em .6em 2em;
 	max-width: 350px;
@@ -233,12 +279,14 @@ body {
 
 .btn-green {
 	@include buttonStyling ($green, $white);
-	max-width: 350px;
 }
 
 .btn-white {
 	@include buttonStyling ($white, $green);
-	max-width: 350px;
+}
+
+.btn-pink {
+	@include buttonStyling ($pink, $white);
 }
 
 // Bootstrap Fixes
@@ -284,6 +332,26 @@ body {
 
 .white {
 	color: $white;
+}
+
+.max-width {
+	max-width: 1080px;
+}
+
+.vertical-align-top {
+	vertical-align: top;
+}
+
+.padding-right-3 {
+	padding-right: 3em;
+}
+
+.padding-left-3  {
+	padding-left: 3em;
+}
+
+.border-left-white {
+	border-left: 1px solid $white;
 }
 
 // Animations
