@@ -109,51 +109,57 @@ function closeAnimation(elem) {
         if (height == 42) {
             clearInterval(id);
         } else {
-            height-- 
+            height--; 
             elem.style.height = height + 'px'; 
         }
     }
 }
 
 function extendWorkshop(elem) {
-	switch (elem.id) {
-		case "workshop-left":
-			// console.log(hidden_left);
-			elem.appendChild(hidden_left);
-			// openWorkshop(hidden_left);
-			// document.getElementById("workshop-list").removeChild(work_middle);
-			// document.getElementById("workshop-list").removeChild(work_right);
-			break;
-		case "workshop-right":
-			elem.appendChild(hidden_right);
-			document.getElementById("workshop-list").removeChild(work_middle);
-			document.getElementById("workshop-list").removeChild(work_left);
-			break;
-		case "workshop-middle":
-			elem.appendChild(hidden_middle);
-			document.getElementById("workshop-list").removeChild(work_left);
-			document.getElementById("workshop-list").removeChild(work_right);
-			break;
+	// elem.parentNode.toggleClass("expand");
+	if (elem.classList.contains("expand")) {
+		elem.classList.remove("expand");
+	} else {
+		elem.classList.add("expand");
 	}
+	// switch (elem.id) {
+	// 	case "workshop-left":
+	// 		// console.log(hidden_left);
+	// 		elem.appendChild(hidden_left);
+	// 		// openWorkshop(hidden_left);
+	// 		// document.getElementById("workshop-list").removeChild(work_middle);
+	// 		// document.getElementById("workshop-list").removeChild(work_right);
+	// 		break;
+	// 	case "workshop-right":
+	// 		elem.appendChild(hidden_right);
+	// 		document.getElementById("workshop-list").removeChild(work_middle);
+	// 		document.getElementById("workshop-list").removeChild(work_left);
+	// 		break;
+	// 	case "workshop-middle":
+	// 		elem.appendChild(hidden_middle);
+	// 		document.getElementById("workshop-list").removeChild(work_left);
+	// 		document.getElementById("workshop-list").removeChild(work_right);
+	// 		break;
+	// }
 
-	// elem.appendChild(child);
-	openWorkshop(elem);
+	// // elem.appendChild(child);
+	// openWorkshop(elem);
 
 }
 
-function openWorkshop(elem) {
-	var text_stay = elem.childNodes[1];
-	var width = 30;
-	var id = setInterval(frame, 5);
-	text_stay.style.width = "30vw";
-	// text_stay.style.marginLeft = "0px";
-	function frame() {
-		if (width == 80) {
-			clearInterval(id);
-		} else {
-			width++;
-			elem.style.width = width + "vw";
-			text_stay.style.width = "30vw";
-		}
-	}
-}
+// function openWorkshop(elem) {
+// 	var text_stay = elem.childNodes[1];
+// 	var width = 30;
+// 	var id = setInterval(frame, 5);
+// 	text_stay.style.width = "30vw";
+// 	// text_stay.style.marginLeft = "0px";
+// 	function frame() {
+// 		if (width == 80) {
+// 			clearInterval(id);
+// 		} else {
+// 			width++;
+// 			elem.style.width = width + "vw";
+// 			text_stay.style.width = "30vw";
+// 		}
+// 	}
+// }

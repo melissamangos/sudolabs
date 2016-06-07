@@ -169,31 +169,71 @@ table.event {
   padding: 5vw;
   border-spacing: 2em;
   width: 100vw;
-  margin: 0 auto; }
+  margin: auto; }
+
+.workshop-button {
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  font-size: 2em;
+  line-height: 60px;
+  font-weight: bold;
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
+  .workshop-button .expand {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
 
 .single-workshop {
-  display: flex;
-  align-items: stretch;
-  flex-wrap: wrap;
-  height: auto;
-  vertical-align: bottom;
-  width: 30vw;
+  background-color: #ed7a88;
+  border-radius: 5%;
+  width: 60px;
+  max-width: 60px;
+  height: 60px;
   text-align: center;
+  overflow: hidden;
+  transition: all 0.2s 0.45s, height 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.25s, max-width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.35s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.35s; }
+  .single-workshop.expand {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.17);
+    border-radius: 0;
+    width: 80%;
+    height: 500px;
+    max-width: 600px;
+    padding: 0;
+    transition: all 0.2s, max-width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.1s, height 0.3s ease 0.25s; }
+
+.workshop-content {
+  transform: translateY(100%);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  text-align: left;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s 0.2s; }
+
+.expand .workshop-content {
+  transform: translateY(0px);
+  opacity: 1;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.05s, opacity 0s; }
+
+.workshop-content .workshop-head {
   padding: 1em 2em 1em 2em;
-  border: 1px black solid;
-  border-spacing: 0px; }
-  .single-workshop div {
-    padding-top: 1em;
-    padding-bottom: 1em; }
+  overflow: auto; }
 
-.original-text {
-  width: 30vw; }
+.workshop-content .workshop-body {
+  background-color: #f3f3f3;
+  width: 100%;
+  height: 100%;
+  padding: 1em 2em 1em 2em;
+  box-sizing: border-box; }
 
-.hidden-workshop {
-  display: table-cell;
-  width: 30vw;
-  visibility: hidden;
-  width: 0px; }
+.action-bar {
+  padding-left: 15px;
+  border-top: 1px solid #E0E0E0;
+  width: 100%; }
+
+.action-bar a {
+  text-transform: uppercase;
+  line-height: 52px;
+  color: #445d64; }
 
 .logo {
   width: 50vw;
