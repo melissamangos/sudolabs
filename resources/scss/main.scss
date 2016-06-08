@@ -175,7 +175,7 @@ table.event {
 }
 
 .volunteer-section {
-	@include contentSection($blue, -51px);
+	@include contentSection($green, -51px);
 	// z-index: 1;
 }
 
@@ -230,7 +230,7 @@ table.event {
 	height: 100px;
 	display: inline-block;
 	font-size: 2em;
-	line-height: 100px;
+	line-height: 95px;
 	font-weight: bold;
 	// transform: rotate(0deg);
 	// -webkit-transform: rotate(0deg);
@@ -304,7 +304,7 @@ table.event {
 
 .workshop-content {
 	.workshop-head {
-		padding: 1em 2em 1em 2em;
+		padding: 0em 2em 1em 2em;
 		overflow: auto;
 	}
 }
@@ -332,6 +332,14 @@ table.event {
 		color: $blue;
 		margin-right: 1em;
 	}
+}
+
+.sponsors-section {
+	@include contentSection($pink, -51px);
+}
+
+.contact-section {
+	@include contentSection($darkgrey, -51px);
 }
 
 // Images
@@ -364,6 +372,11 @@ table.event {
 .about-img {
 	width: 80%;
 	max-width: 480px;
+}
+
+.workshop-icon {
+	width: 55px;
+	fill: $green;
 }
 
 // Buttons

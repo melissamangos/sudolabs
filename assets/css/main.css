@@ -131,7 +131,7 @@ table.event {
       top: 30vh; } }
 
 .volunteer-section {
-  background-color: #445d64;
+  background-color: #45bab3;
   transform: translateY(-51px);
   padding: 5vw; }
 
@@ -183,7 +183,7 @@ table.event {
   height: 100px;
   display: inline-block;
   font-size: 2em;
-  line-height: 100px;
+  line-height: 95px;
   font-weight: bold;
   transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
@@ -232,7 +232,7 @@ table.event {
   -webkit-transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.05s, opacity 0s; }
 
 .workshop-content .workshop-head {
-  padding: 1em 2em 1em 2em;
+  padding: 0em 2em 1em 2em;
   overflow: auto; }
 
 .workshop-content .workshop-body {
@@ -253,6 +253,16 @@ table.event {
   line-height: 52px;
   color: #445d64;
   margin-right: 1em; }
+
+.sponsors-section {
+  background-color: #ed7a88;
+  transform: translateY(-51px);
+  padding: 5vw; }
+
+.contact-section {
+  background-color: #3d3d3d;
+  transform: translateY(-51px);
+  padding: 5vw; }
 
 .logo {
   width: 50vw;
@@ -278,6 +288,10 @@ table.event {
 .about-img {
   width: 80%;
   max-width: 480px; }
+
+.workshop-icon {
+  width: 55px;
+  fill: #45bab3; }
 
 .btn-green {
   background-color: #45bab3;
