@@ -24,9 +24,12 @@ $easer: cubic-bezier(0.4, 0, 0.2, 1);
 // Body
 body {
 	background: #FFF;
-	font-family: inherit;
-	font-weight: lighter;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  	font-size: 14px;
+  	line-height: 1.42857143;
+	font-weight: 300;
 	padding-top: 50px;
+	letter-spacing: .1pt;
 }
 
 // Typography
