@@ -149,7 +149,10 @@ table.event {
   border-radius: 10px;
   padding: 1em;
   padding-bottom: 2em;
-  margin: 1em; }
+  margin: 1em;
+  overflow: hidden;
+  height: 50px;
+  max-height: 50px; }
   .single-volunteer ul {
     display: inline-block; }
     .single-volunteer ul li {
@@ -408,6 +411,84 @@ table.event {
   100% {
     opacity: 1; } }
 
+@-webkit-keyframes expandBounce {
+  0% {
+    height: 50px;
+    max-height: 50px; }
+  60% {
+    height: 250px;
+    max-height: 250px; }
+  100% {
+    height: 200px;
+    max-height: 200px; } }
+
+@-moz-keyframes expandBounce {
+  0% {
+    height: 50px;
+    max-height: 50px; }
+  60% {
+    height: 250px;
+    max-height: 250px; }
+  100% {
+    height: 200px;
+    max-height: 200px; } }
+
+@keyframes expandBounce {
+  0% {
+    height: 50px;
+    max-height: 50px; }
+  60% {
+    height: 250px;
+    max-height: 250px; }
+  100% {
+    height: 200px;
+    max-height: 200px; } }
+
+@-webkit-keyframes shrinkBounce {
+  0% {
+    height: 200px;
+    max-height: 200px; }
+  40% {
+    height: 250px;
+    max-height: 250px; }
+  100% {
+    height: 50px;
+    max-height: 50px; } }
+
+@-moz-keyframes shrinkBounce {
+  0% {
+    height: 200px;
+    max-height: 200px; }
+  40% {
+    height: 250px;
+    max-height: 250px; }
+  100% {
+    height: 50px;
+    max-height: 50px; } }
+
+@keyframes shrinkBounce {
+  0% {
+    height: 200px;
+    max-height: 200px; }
+  40% {
+    height: 250px;
+    max-height: 250px; }
+  100% {
+    height: 50px;
+    max-height: 50px; } }
+
+.single-volunteer.inactive {
+  -webkit-animation: shrinkBounce 0.4s ease-out 0s 1 forwards;
+  -moz-animation: shrinkBounce 0.4s ease-out 0s 1 forwards;
+  -o-animation: shrinkBounce 0.4s ease-out 0s 1 forwards;
+  animation: shrinkBounce 0.4s ease-out 0s 1 forwards; }
+
+.single-volunteer.active {
+  -webkit-animation: expandBounce 0.4s ease-out 0s 1 forwards;
+  -moz-animation: expandBounce 0.4s ease-out 0s 1 forwards;
+  -o-animation: expandBounce 0.4s ease-out 0s 1 forwards;
+  animation: expandBounce 0.4s ease-out 0s 1 forwards; }
+
 .active .change-arrow {
   -webkit-transform: rotate(45deg) translate(-5px, -5px);
   transform: rotate(45deg) translate(-5px, -5px); }
@@ -419,10 +500,10 @@ table.event {
     transform: rotate(90deg) translate(10px, 0); }
 
 .active .volunteer-blurb {
-  -webkit-animation: fadeIn 0.5s 0.2s 1 forwards;
-  -moz-animation: fadeIn 0.5s 0.2s 1 forwards;
-  -o-animation: fadeIn 0.5s 0.2s 1 forwards;
-  animation: fadeIn 0.5s 0.2s 1 forwards; }
+  -webkit-animation: fadeIn 0.5s linear 0.2s 1 forwards;
+  -moz-animation: fadeIn 0.5s linear 0.2s 1 forwards;
+  -o-animation: fadeIn 0.5s linear 0.2s 1 forwards;
+  animation: fadeIn 0.5s linear 0.2s 1 forwards; }
 
 .change-arrow {
   width: 13px;

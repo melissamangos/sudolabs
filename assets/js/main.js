@@ -17,15 +17,15 @@ PURPOSE: 	Removes paragraphs in
 			Volunteer section to be
 			added once clicked
 **************************************/
-window.onload = function() {
-	mentor_blurb = document.getElementById("mentors");
-	instructor_blurb = document.getElementById("instructors");
-	team_blurb = document.getElementById("team");
+// window.onload = function() {
+// 	mentor_blurb = document.getElementById("mentors");
+// 	instructor_blurb = document.getElementById("instructors");
+// 	team_blurb = document.getElementById("team");
 
-	mentor_blurb.parentNode.removeChild(mentor_blurb);
-	instructor_blurb.parentNode.removeChild(instructor_blurb);
-	team_blurb.parentNode.removeChild(team_blurb);
-}
+// 	mentor_blurb.parentNode.removeChild(mentor_blurb);
+// 	instructor_blurb.parentNode.removeChild(instructor_blurb);
+// 	team_blurb.parentNode.removeChild(team_blurb);
+// }
 
 /**************************************
 FUNCTION: 	volunteerDrop
@@ -35,46 +35,20 @@ ARGUEMENTS: elem - sends the current
 			or remove the respective 
 			volunteer paragraph
 
-PURPOSE: 	Append or remove the blurb
-			under each volunteer tab
+PURPOSE: 	Adds 'active' if opening
+			element, and 'inactive' if
+			closing element
+			By default, adds 'active'
 **************************************/
 function volunteerDrop(elem) {
-	makeActive(elem);
-	switch(elem.id) {
-		case "mentor-full":
-			if (mentor == 0) {
-				openAnimation(elem);
-				elem.appendChild(mentor_blurb);
-
-				mentor = 1;
-			} else {
-				closeAnimation(elem);
-				elem.removeChild(mentor_blurb);
-				mentor = 0;
-			}
-			break;
-		case "instructor-full":
-			if (instruc == 0) {
-				openAnimation(elem);
-				elem.appendChild(instructor_blurb);
-				instruc = 1;
-			} else {
-				closeAnimation(elem);
-				elem.removeChild(instructor_blurb);
-				instruc = 0;
-			}
-			break;
-		case "team-full":
-			if (team == 0) {
-				openAnimation(elem);
-				elem.appendChild(team_blurb);
-				team = 1;
-			} else {
-				closeAnimation(elem);
-				elem.removeChild(team_blurb);
-				team = 0;
-			}
-			break;
+	if (elem.classList.contains("active")) {
+		elem.classList.remove("active");
+		elem.classList.add("inactive");
+	} else if (elem.classList.contains("active"))  {
+		elem.classList.remove("inactive");
+		elem.classList.add("active");
+	} else {
+		elem.classList.add("active");
 	}
 }
 
@@ -92,24 +66,6 @@ PURPOSE: 	Force a volunteer element
 function forceOpen(id) {
 	var elem = document.getElementById(id);
 	volunteerDrop(elem);
-}
-
-/**************************************
-FUNCTION: 	makeActive
-
-ARGUEMENTS: elem - sends current element 
-
-PURPOSE: 	Add or remove the 'active' 
-			class from an element to
-			check if a volunteer tab 
-			is open or closed
-**************************************/
-function makeActive(elem) {
-	if (elem.classList.contains("active")) {
-		elem.classList.remove("active");
-	} else {
-		elem.classList.add("active");
-	}
 }
 
 /**************************************

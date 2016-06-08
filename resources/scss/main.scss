@@ -195,6 +195,10 @@ table.event {
 	padding: 1em;
 	padding-bottom: 2em;
 	margin: 1em;
+	overflow: hidden;
+	height: 50px;
+	max-height: 50px;
+
 	ul {
 		display: inline-block;
 		li {
@@ -205,6 +209,38 @@ table.event {
 		}
 	}
 }
+
+	// display: inline-block;
+	// margin: 2em;
+	// vertical-align: top;
+	// background-color: $pink;
+	// border-radius:10px;
+	// width: 100px;
+	// max-width: 100px;
+	// height: 100px;
+	// text-align: center;
+	// overflow: hidden;
+
+	// transition: all 0.2s 0.45s,
+	// 			height 0.2s $easer 0.25s, 
+	// 			max-width 0.2s $easer 0.35s, 
+	// 			width 0.2s $easer 0.35s;
+
+	// -webkit-transition: all 0.2s 0.45s,
+	// 			height 0.2s $easer 0.25s, 
+	// 			max-width 0.2s $easer 0.35s, 
+	// 			width 0.2s $easer 0.35s;
+
+	// &.expand {
+	// 	border-radius: 10px;
+	// 	width: 350px;
+	// 	height: 600px;
+	// 	max-width: 600px;
+	// 	padding: 0;
+
+	// 	transition: all 0.2s, max-width 0.2s $easer 0.1s, height 0.3s ease 0.25s;
+	// 	-webkit-transition: all 0.2s, max-width 0.2s $easer 0.1s, height 0.3s ease 0.25s;
+	// }
 
 .volunteer-blurb {
 	vertical-align: middle;
@@ -512,14 +548,59 @@ table.event {
 	}
 }
 
-@mixin animation ($duration, $delay, $animation) {
-	-webkit-animation: $animation $duration $delay 1 forwards;
+@include keyframes(expandBounce) {
+	0% {
+		height: 50px;
+		max-height: 50px;
+	}
 
-	-moz-animation: $animation $duration $delay 1 forwards;
+	60% {
+		height: 250px;
+		max-height: 250px;
 
-	-o-animation: $animation $duration $delay 1 forwards;
+	}
+
+	100% {
+		height: 200px;
+		max-height: 200px;
+	}
+}
+
+@include keyframes(shrinkBounce) {
+	0% {
+		height: 200px;
+		max-height: 200px;
+	}
+
+	40% {
+		height: 250px;
+		max-height: 250px;
+
+	}
+
+	100% {
+		height: 50px;
+		max-height: 50px;
+	}
+}
+
+@mixin animation ($duration, $delay, $animation, $timing) {
+	-webkit-animation: $animation $duration $timing $delay 1 forwards;
+
+	-moz-animation: $animation $duration $timing $delay 1 forwards;
+
+	-o-animation: $animation $duration $timing $delay 1 forwards;
 	
-	animation: $animation $duration $delay 1 forwards;
+	animation: $animation $duration $timing $delay 1 forwards;
+}
+
+.single-volunteer {
+	&.inactive {
+		@include animation(0.4s, 0s, shrinkBounce, ease-out);
+	}
+	&.active {
+		@include animation(0.4s, 0s, expandBounce, ease-out);
+	}	
 }
 
 // CodePen Stuff
@@ -540,7 +621,7 @@ table.event {
 	}
 	}
 	.volunteer-blurb {
-		@include animation(0.5s, 0.2s, fadeIn);
+		@include animation(0.5s, 0.2s, fadeIn, linear);
 	}
 }
 
