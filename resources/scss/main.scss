@@ -217,21 +217,25 @@ table.event {
 	margin: auto;
 }
 
+.workshop-list {
+	width: 100%;
+}
+
 .workshop-button {
 	cursor: pointer;
-	width: 60px;
-	height: 60px;
+	width: 100px;
+	height: 100px;
 	display: inline-block;
 	font-size: 2em;
-	line-height: 60px;
+	line-height: 100px;
 	font-weight: bold;
-	transform: rotate(0deg);
-	-webkit-transform: rotate(0deg);
+	// transform: rotate(0deg);
+	// -webkit-transform: rotate(0deg);
 
 	transition: all 0.7s $easer;
 	-webkit-transition: all 0.7s $easer;
 
-	.expand {
+	&.expand {
 		transform: rotate(720deg);
 		-webkit-transform: rotate(720deg);
 
@@ -241,18 +245,15 @@ table.event {
 }
 
 .single-workshop {
-	// position: absolute;
-	// margin: auto;
-	// left: 0;
-	// right: 0;
-	// top: 5vh;	
+	display: inline-block;
+	margin: 2em;
+	vertical-align: top;
 	background-color: $pink;
 	border-radius:10px;
-	width: 60px;
-	max-width: 60px;
-	height: 60px;
+	width: 100px;
+	max-width: 100px;
+	height: 100px;
 	text-align: center;
-	// box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 	overflow: hidden;
 
 	transition: all 0.2s 0.45s,
@@ -266,10 +267,9 @@ table.event {
 				width 0.2s $easer 0.35s;
 
 	&.expand {
-		// box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.17);
 		border-radius: 10px;
 		width: 30vw;
-		height: 500px;
+		height: 70vh;
 		max-width: 600px;
 		padding: 0;
 
@@ -299,7 +299,6 @@ table.event {
 	}
 }
 
-
 .workshop-content {
 	.workshop-head {
 		padding: 1em 2em 1em 2em;
@@ -309,8 +308,6 @@ table.event {
 
 .workshop-content {
 	.workshop-body {
-		// color: $lightgrey;
-		// color: rgba(0, 0, 0, 0.87);
 		background-color: white;
 		width: 100%;
 		height: 100%;
@@ -333,35 +330,6 @@ table.event {
 		margin-right: 1em;
 	}
 }
-// .single-workshop {	
-// 	display: flex;
-// 	align-items: stretch;
-// 	flex-wrap: wrap;
-// 	height: auto;
-// 	vertical-align: bottom;
-// 	width: 30vw;
-// 	text-align: center;
-// 	padding: 1em 2em 1em 2em;
-// 	border: 1px black solid;
-// 	border-spacing: 0px;
-
-// 	div {
-// 		padding-top: 1em;
-// 		padding-bottom: 1em;
-// 	}
-// }
-
-// .original-text {
-// 	width: 30vw;
-// }
-
-// .hidden-workshop {
-// 	display: table-cell;
-// 	width: 30vw;
-// 	visibility: hidden;
-// 	width: 0px;
-// }
-
 
 // Images
 .logo {
