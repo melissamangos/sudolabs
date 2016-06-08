@@ -76,6 +76,16 @@ body {
 	@include underline($darkgrey);
 }
 
+.contact-title:after {
+	content: "";
+	background: $white; 
+	position: absolute; 
+	bottom: 0; 
+	left: calc(50% - 35px); 
+	height: 8px; 
+	width: 70px;
+}
+
 // Events Formatting
 
 .date {
@@ -138,10 +148,10 @@ table.event {
 		li {
 			text-decoration: none;
 			font: 1em GothamBold;
-			color: white;	
+			color: $white;	
 			a {
 				text-decoration: none !important;
-				color: white !important;
+				color: $white !important;
 			}	
 			// a:hover {
 			// 	CARA ADD HOVER
@@ -180,7 +190,7 @@ table.event {
 }
 
 .single-volunteer {
-	background-color: white;
+	background-color: $white;
 	border-radius: 10px;
 	padding: 1em;
 	padding-bottom: 2em;
@@ -271,8 +281,8 @@ table.event {
 
 	&.expand {
 		border-radius: 10px;
-		width: 30vw;
-		height: 70vh;
+		width: 350px;
+		height: 600px;
 		max-width: 600px;
 		padding: 0;
 
@@ -306,17 +316,24 @@ table.event {
 	.workshop-head {
 		padding: 0em 2em 1em 2em;
 		overflow: auto;
+		h3 {
+			font-size: 2em;
+		}
 	}
 }
 
 .workshop-content {
 	.workshop-body {
-		background-color: white;
+		background-color: $white;
 		width: 100%;
 		height: 100%;
 		padding: 2em 2em 1em 2em ;
 		box-sizing: border-box;
 	}
+}
+
+.workshop-sub {
+	font-size: 1.2em;
 }
 
 .action-bar {
@@ -334,12 +351,18 @@ table.event {
 	}
 }
 
+#workshop-idea {
+	background-color: $green;
+}
+
 .sponsors-section {
 	@include contentSection($pink, -51px);
 }
 
 .contact-section {
 	@include contentSection($darkgrey, -51px);
+	text-align: center;
+	color: $white;
 }
 
 // Images

@@ -10,7 +10,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>Sudo</title>
 </head>
-<body>
+<body  id="main">
 	<nav class="nav-section navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -20,7 +20,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">
+				<a class="navbar-brand" href="#" onclick="smoothScroll('main');">
 					<img src="assets/imgs/sudo_arrow.svg" alt="Little Sudo Logo" id="sudo-arrow">
 				</a>
 			</div>
@@ -30,12 +30,12 @@
 			
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#about">ABOUT</a></li>
-					<li><a href="#events">EVENTS</a></li>
-					<li><a href="#sponsors">SPONSORS</a></li>
-					<li><a href="#workshops">WORKSHOPS</a></li>
-					<li><a href="#volunteer">VOLUNTEER</a></li>
-					<li><a href="#contact">CONTACT</a></li>
+					<li><a href="#about" onclick="smoothScroll('about');">ABOUT</a></li>
+					<li><a href="#events" onclick="smoothScroll('events');">EVENTS</a></li>
+					<li><a href="#sponsors" onclick="smoothScroll('sponsors');">SPONSORS</a></li>
+					<li><a href="#workshops" onclick="smoothScroll('workshops');">WORKSHOPS</a></li>
+					<li><a href="#volunteer" onclick="smoothScroll('volunteer');">VOLUNTEER</a></li>
+					<li><a href="#contact" onclick="smoothScroll('contact');">CONTACT</a></li>
 				</ul>
 			</div>
 		</div>
@@ -59,7 +59,7 @@ LOL THAT KINDA SOUNDS LIKE A BS HIGH SCHOOL ESSAY CARA HALP
 oh meybe that should be in about.. or maybe something more srs should be in about   -->
 			</div>
 			<br>
-			<button type="button" class="btn-green">
+			<button href="#about" onclick="smoothScroll('about');" class="btn-green">
 				About
 			</button>
 			<img src="assets/imgs/web_dev.svg" class="main-img">
@@ -219,99 +219,32 @@ oh meybe that should be in about.. or maybe something more srs should be in abou
 					<span class="workshop-button" onclick="extendWorkshop(this.parentElement);"><img src="assets/imgs/htmlcss.svg" class="workshop-icon"></span>
 					<div class="workshop-content">
 						<div class="workshop-head">
-					  		<h3>Intro to Web Development</h3>
-							<p class="workshop-sub">7 hrs </p>
-						</div>
-						<div class="workshop-body">
-							<p>
-							In this workshop, you will be learning to build an online resume using HTML and CSS. Our wokshops team tailored an interactive and collaborative workshop to allow you to customize and easily complete the project.<br><br> This workshop results in this project and takes 5 hours to complete<br><br>
-							To be preared for the workshop, bring your own laptop and download a text editor like Sublime Text.
-							</p>
-							<div class="action-bar"><a>SHARE</a><a>LEARN MORE</a></div>
-						</div>
-					</div>
-				</div>
-
-				<div class="single-workshop">
-					<span class="workshop-button" onclick="extendWorkshop(this.parentElement);">O <!-- WORKSHOP IMAGE GOES HERE --></span>
-					<div class="workshop-content">
-						<div class="workshop-head">
-					  		<h3>Advanced Web Development</h3>
+					  		<h3>Introduction to Web Development</h3>
 							<p class="workshop-sub">5 hrs </p>
 						</div>
 						<div class="workshop-body">
 							<p>
-							In this workshop, you will learn the basics of JavaScript, advanced CSS, and responsive design.<br>You will need experience in HTML and CSS to follow along.<br><br>To prepare for the workshop, bring your own laptop and download a text editor like Sublime Text.
+							In this workshop, you will be learning to build an online resume using HTML and CSS. Our wokshops team have tailored this workshop to be interactive and collaborative, allowing you to easily complete and customize the final project.<br><br> View our demo below showcasing what you will make with us!<br><br>
+							Be sure to bring your own laptop and download a text editor like Sublime Text before the event.
 							</p>
-							<div class="action-bar"><a>SHARE</a><a>LEARN MORE</a></div>
+							<div class="action-bar"><a href="#">VIEW DEMO</a><a href="#">LOOK FOR EVENTS</a></div>
 						</div>
 					</div>
 				</div>
-
-<!-- 				<div class="single-workshop" id="workshop-left">
-					<div class="original-text">
-						<div>
+				<div class="single-workshop" id="workshop-idea">
+					<span class="workshop-button" onclick="extendWorkshop(this.parentElement);"><img src="assets/imgs/lightbulb.svg" class="workshop-icon"></span>
+					<div class="workshop-content" >
+						<div class="workshop-head">
+					  		<h3>Have A Workshop Idea?<br></h3>
+							<p class="workshop-sub"><br></p>
 						</div>
-						<div>
-							<h3>INTRO TO WEB DEV</h3>
-							<div class="workshop-blurb">
-								Dis workshop will teach you the HTML and CSS necessary for creating an online resume. Wow!
-							</div>
-							<div>
-								1-2 hrs
-							</div>
-						</div>
-						<div>
-							<button class="btn-pink" onclick="extendWorkshop(this.parentNode.parentNode);">
-								MORE INFO
-							</button>
+						<div class="workshop-body">
+							<p>
+							Are there any languages, frameworks, or concepts you believe Kingston would like to learn?<br><br>Reach out to us at workshops@sudolabs.ca to pitch your idea!
+							</p>
+							<div class="action-bar"><a href="mailto:workshops@sudolabs.ca">EMAIL US</a><a href="#volunteer" onclick="forceOpen('team-full'); smoothScroll('volunteer');">JOIN OUR TEAM</a></div>
 						</div>
 					</div>
-					<div class="hidden-workshop collapse" id="hidden-left">
-						This workshop bleep bloop blop download stuff here hehe
-					</div>
-				</div> -->
-<!-- 				<div class="single-workshop" id="workshop-middle">
-					<div>
-					</div>
-					<div>
-						<h3>ADVANCED WEB DEV</h3>
-						<div class="workshop-blurb">
-							You think you know web dev? Ha! Think again pal.
-						</div>
-						<div>
-							7 hrs
-						</div>
-					</div>
-					<div>
-						<button type="button" class="btn-pink">
-							MORE INFO
-						</button>
-					</div>
-					<div class="hidden-workshop" id="hidden-middle">
-						
-					</div>
-				</div>
-				<div class="single-workshop" id="workshop-right">
-					<div>
-					</div>
-					<div>
-						<h3>INTRO TO SQL</h3>
-						<div class="workshop-blurb">
-							Wanna be a SQL Pro? Haha get it? U will b the very best dat no 1 ever wuz
-						</div>
-						<div>
-							7 hrs
-						</div>
-					</div>
-					<div>
-						<button type="button" class="btn-pink">
-							MORE INFO
-						</button>
-					</div>
-					<div class="hidden-workshop" id="hidden-right">
-						
-					</div> -->
 				</div>
 			</div>
 		</div>
@@ -321,9 +254,12 @@ oh meybe that should be in about.. or maybe something more srs should be in abou
 		<div class="container container-adjustment max-width">	
 			<div class="title">
 					<h1 class="light-title">Sponsors</h1>
-				</div>	
+			</div>
+			<p class="white">
+				Interested in helping shape the Sudo community? Reach out to sponsorship@sudolabs.ca
+			</p>	
 			<button type="button" class="btn">
-				SPONSOR US HAHA THX
+				BECOME A SPONSOR
 			</button>
 		</div>
 	</section>
@@ -344,7 +280,7 @@ oh meybe that should be in about.. or maybe something more srs should be in abou
 					<span class="change-arrow"></span>
 				</div>
 				<div id="mentors" class="volunteer-blurb">
-					All of our workshops are possible due to our volunteer mentors. If you have experience and are passionate about programming, come help us build our community by sharing what you know with the women of Kingston. Subscribe to our mentor email list here. <!-- LINK TO SOMETHING -->
+					All of our workshops are possible due to our volunteer mentors. If you have experience and are passionate about programming, come help us build our community by sharing what you know with the women of Kingston.<br><br>Subscribe to our mentor email list here. <!-- LINK TO SOMETHING -->
 				</div>
 			</div>
 			<div class="single-volunteer" id="instructor-full" onclick="volunteerDrop(this);">
@@ -356,7 +292,7 @@ oh meybe that should be in about.. or maybe something more srs should be in abou
 					<span class="change-arrow"></span>
 				</div>
 				<div id="instructors" class="volunteer-blurb">
-					For each workshop, we look for passionate, skilled, and inspiring Kingstonians to share their knowledge with our Sudoers. The workshop instructors teach, inspire, and help us shape our collaborative and welcoming community. To apply, send us your resume and a short paragraph about yourself and your experience to melissa@sudolabs.ca
+					For each workshop, we look for passionate, skilled, and inspiring Kingstonians to share their knowledge with our Sudoers. The workshop instructors teach, inspire, and help us shape our collaborative and welcoming community.<br><br>To apply, send us your resume and a short paragraph about yourself and your experience to melissa@sudolabs.ca
 				</div>
 			</div>
 			<div class="single-volunteer" id="team-full" onclick="volunteerDrop(this);">
@@ -368,7 +304,7 @@ oh meybe that should be in about.. or maybe something more srs should be in abou
 					<span class="change-arrow"></span>
 				</div>
 				<div id="team" class="volunteer-blurb">
-					Want to get more involved in the Sudo community? We're always looking for more passionate and innovative individuals within the Kingston community to support and work alongside our team. On our team, you can assist with creating website content, marketing Sudo over social media, or even planning the monthly events. To apply, send us your resume and a short paragraph about yourself and your experience to melissa@sudolabs.ca
+					Want to get more involved in the Sudo community? We're always looking for more passionate and innovative individuals within the Kingston community to support and work alongside our team. On our team, you can assist with creating website content, marketing Sudo over social media, or even planning the monthly events.<br><br>To apply, send us your resume and a short paragraph about yourself and your experience to melissa@sudolabs.ca
 				</div>
 			</div>
 		</div>
@@ -377,7 +313,7 @@ oh meybe that should be in about.. or maybe something more srs should be in abou
 	<section class="contact-section" id="contact">
 		<div class="title">
 			<!-- <img src="">  ICON THINGY		 -->
-			<h1>CONTACT</h1>
+			<h1 class="light-title contact-title">CONTACT</h1>
 		</div>	
 		<div class="contact-subtitle">
 			Let's get coding.
