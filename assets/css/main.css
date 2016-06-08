@@ -184,8 +184,8 @@ table.event {
   transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
   .workshop-button .expand {
-    transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
+    transform: rotate(720deg);
+    -webkit-transform: rotate(720deg);
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     -webkit-transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
 
@@ -379,10 +379,10 @@ table.event {
     transform: rotate(90deg) translate(10px, 0); }
 
 .active .volunteer-blurb {
-  -webkit-animation: fadeIn 1s 0.5s 1 forwards;
-  -moz-animation: fadeIn 1s 0.5s 1 forwards;
-  -o-animation: fadeIn 1s 0.5s 1 forwards;
-  animation: fadeIn 1s 0.5s 1 forwards; }
+  -webkit-animation: fadeIn 0.5s 0.2s 1 forwards;
+  -moz-animation: fadeIn 0.5s 0.2s 1 forwards;
+  -o-animation: fadeIn 0.5s 0.2s 1 forwards;
+  animation: fadeIn 0.5s 0.2s 1 forwards; }
 
 .change-arrow {
   width: 13px;

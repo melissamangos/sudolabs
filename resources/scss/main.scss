@@ -232,8 +232,8 @@ table.event {
 	-webkit-transition: all 0.7s $easer;
 
 	.expand {
-		transform: rotate(90deg);
-		-webkit-transform: rotate(90deg);
+		transform: rotate(720deg);
+		-webkit-transform: rotate(720deg);
 
 		transition: all 0.5s $easer;
 		-webkit-transition: all 0.5s $easer;
@@ -533,7 +533,7 @@ table.event {
 	}
 	}
 	.volunteer-blurb {
-		@include animation(1s, 0.5s, fadeIn);
+		@include animation(0.5s, 0.2s, fadeIn);
 	}
 }
 

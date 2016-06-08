@@ -91,25 +91,25 @@ function makeActive(elem) {
 
 function openAnimation(elem) {
     var height = 42;
-    var id = setInterval(frame, 3);
+    var id = setInterval(frame, 1);
     function frame() {
-        if (height == 175) {
+        if (height == 177) {
             clearInterval(id);
         } else {
-            height++; 
+            height = height + 5; 
             elem.style.height = height + 'px'; 
         }
     }
 }
 
 function closeAnimation(elem) {
-    var height = 175;
-    var id = setInterval(frame, 3);
+    var height = 177;
+    var id = setInterval(frame, 1);
     function frame() {
-        if (height == 42) {
+        if (height <= 42) {
             clearInterval(id);
         } else {
-            height--; 
+            height = height - 5; 
             elem.style.height = height + 'px'; 
         }
     }
