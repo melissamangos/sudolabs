@@ -174,30 +174,34 @@ table.event {
   width: 100vw;
   margin: auto; }
 
+.workshop-list {
+  width: 100%; }
+
 .workshop-button {
   cursor: pointer;
-  width: 60px;
-  height: 60px;
+  width: 100px;
+  height: 100px;
   display: inline-block;
   font-size: 2em;
-  line-height: 60px;
+  line-height: 100px;
   font-weight: bold;
-  transform: rotate(0deg);
-  -webkit-transform: rotate(0deg);
   transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
-  .workshop-button .expand {
+  .workshop-button.expand {
     transform: rotate(720deg);
     -webkit-transform: rotate(720deg);
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     -webkit-transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
 
 .single-workshop {
+  display: inline-block;
+  margin: 2em;
+  vertical-align: top;
   background-color: #ed7a88;
   border-radius: 10px;
-  width: 60px;
-  max-width: 60px;
-  height: 60px;
+  width: 100px;
+  max-width: 100px;
+  height: 100px;
   text-align: center;
   overflow: hidden;
   transition: all 0.2s 0.45s, height 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.25s, max-width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.35s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.35s;
@@ -205,7 +209,7 @@ table.event {
   .single-workshop.expand {
     border-radius: 10px;
     width: 30vw;
-    height: 500px;
+    height: 70vh;
     max-width: 600px;
     padding: 0;
     transition: all 0.2s, max-width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.1s, height 0.3s ease 0.25s;
