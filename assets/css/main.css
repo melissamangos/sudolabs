@@ -16,13 +16,14 @@ body {
   letter-spacing: .1pt; }
 
 .subtitle {
-  font: 1.3em GothamLight;
-  margin-left: 30%;
-  margin-right: 30%; }
+  font: 1em GothamLight;
+  line-height: inherit;
+  margin-left: 25%;
+  margin-right: 25%; }
 
 .dark-title {
   font: 4em GothamBold;
-  color: #3d3d3d;
+  color: #1c1c1c;
   padding-bottom: .5em;
   margin-top: 0;
   margin-bottom: .5em;
@@ -49,21 +50,24 @@ body {
 
 .dark-title:after {
   content: "";
-  background: #3d3d3d;
+  background: #1c1c1c;
   position: absolute;
   bottom: 0;
   left: 0;
   height: 8px;
   width: 70px; }
 
+.contact-title {
+  font-size: 2em; }
+
 .contact-title:after {
   content: "";
   background: #FFFFFF;
   position: absolute;
   bottom: 0;
-  left: calc(50% - 35px);
-  height: 8px;
-  width: 70px; }
+  left: calc(50% - 25px);
+  height: 5px;
+  width: 50px; }
 
 .date {
   text-transform: uppercase;
@@ -106,7 +110,6 @@ table.event {
 
 .nav-section {
   background-color: #445d64;
-  transform: translateY(0);
   padding: 5vw;
   padding: 0; }
   .nav-section ul li {
@@ -119,29 +122,23 @@ table.event {
 
 .main-section {
   background-color: #f3f3f3;
-  transform: translateY(-50px);
   padding: 5vw;
+  background-image: url("../../assets/imgs/icon-bg.png");
+  background-repeat: repeat;
   height: 100vh;
-  min-height: 100vh;
   position: relative;
   text-align: center;
-  z-index: -1; }
+  padding-bottom: -50px; }
 
 .main-content {
-  position: relative;
-  top: 20vh;
-  height: 80vh;
-  text-align: center; }
-  @media (max-height: 630px) {
-    .main-content {
-      top: 30vh; } }
-  @media (max-width: 850px) {
-    .main-content {
-      top: 30vh; } }
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%); }
 
 .volunteer-section {
   background-color: #45bab3;
-  transform: translateY(-51px);
   padding: 5vw; }
 
 .single-volunteer {
@@ -170,17 +167,14 @@ table.event {
 
 .about-section {
   background-color: #ed7a88;
-  transform: translateY(-51px);
   padding: 5vw; }
 
 .events-section {
   background-color: #45bab3;
-  transform: translateY(-51px);
   padding: 5vw; }
 
 .workshop-section {
   background-color: #f3f3f3;
-  transform: translateY(-51px);
   padding: 5vw;
   border-spacing: 2em;
   width: 100vw;
@@ -276,33 +270,17 @@ table.event {
 
 .sponsors-section {
   background-color: #ed7a88;
-  transform: translateY(-51px);
   padding: 5vw; }
 
 .contact-section {
-  background-color: #3d3d3d;
-  transform: translateY(-51px);
+  background-color: #1c1c1c;
   padding: 5vw;
   text-align: center;
   color: #FFFFFF; }
 
 .logo {
   width: 50vw;
-  height: auto;
-  max-width: 420px;
-  max-height: 40vh; }
-
-.main-img {
-  width: 85vw;
-  position: absolute;
-  bottom: 0px;
-  left: 7.5%; }
-  @media (max-height: 630px) {
-    .main-img {
-      display: none; } }
-  @media (max-width: 850px) {
-    .main-img {
-      display: none; } }
+  max-width: 380px; }
 
 #sudo-arrow {
   height: 50px; }
@@ -314,6 +292,10 @@ table.event {
 .workshop-icon {
   width: 55px;
   fill: #45bab3; }
+
+.contact-img {
+  margin: 1.5em;
+  max-width: 5em; }
 
 .btn-green {
   background-color: #45bab3;
@@ -338,9 +320,9 @@ table.event {
   max-width: 350px; }
 
 .btn-pink {
-  background-color: #ed7a88;
+  background-color: #FFFFFF;
   font: 1em GothamBold;
-  color: #FFFFFF;
+  color: #ed7a88;
   text-transform: uppercase;
   border-radius: 50px;
   width: 150px;

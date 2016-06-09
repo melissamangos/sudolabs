@@ -3,7 +3,7 @@
 $blue: #445d64;
 $pink: #ed7a88;
 $green: #45bab3;
-$darkgrey: #3d3d3d;
+$darkgrey: #1c1c1c;
 $lightgrey: #f3f3f3;
 $white: #FFFFFF;
 
@@ -34,9 +34,10 @@ body {
 
 // Typography
 .subtitle {
-	font: 1.3em GothamLight;
-	margin-left: 100% * 0.3;
-	margin-right: 100% * 0.3;
+	font: 1em GothamLight;
+	line-height: inherit;
+	margin-left: 100% * 0.25;
+	margin-right: 100% * 0.25;
 }
 
 @mixin titles($font-color) {
@@ -46,16 +47,15 @@ body {
 	margin-top: 0;
 	margin-bottom: .5em;
 	text-transform: uppercase;
+	position: relative;
 }
 
 .dark-title {
 	@include titles($darkgrey);
-	position: relative;
 }
 
 .light-title {
 	@include titles($white);
-	position: relative;
 }
 
 @mixin underline($color) {
@@ -76,14 +76,18 @@ body {
 	@include underline($darkgrey);
 }
 
+.contact-title {
+	font-size: 2em;
+}
+
 .contact-title:after {
 	content: "";
 	background: $white; 
 	position: absolute; 
 	bottom: 0; 
-	left: calc(50% - 35px); 
-	height: 8px; 
-	width: 70px;
+	left: calc(50% - 25px); 
+	height: 5px; 
+	width: 50px;
 }
 
 // Events Formatting
@@ -135,14 +139,13 @@ table.event {
 }
 
 // Sections
-@mixin contentSection($color, $Ytranslation) {
+@mixin contentSection($color) {
 	background-color: $color;
-	transform: translateY($Ytranslation);
 	padding: 5vw;
 }
 
 .nav-section {
-	@include contentSection($blue, 0);
+	@include contentSection($blue);
 	padding: 0;
 	ul {
 		li {
@@ -161,32 +164,25 @@ table.event {
 }
 
 .main-section {
-	@include contentSection($lightgrey, -50px);
+	@include contentSection($lightgrey);
+	background-image: url("../../assets/imgs/icon-bg.png");
+    background-repeat: repeat;
 	height: 100vh;
-	min-height: 100vh;
 	position: relative;
 	text-align: center;
-	z-index: -1;
+	padding-bottom: -50px;
 }
 
 .main-content {
-	position: relative;
-	top: 20vh;
-	height: 80vh;
-	text-align: center;
-
-	@media (max-height: 630px) {
-		top: 30vh;
-	}
-
-	@media (max-width: 850px) {
-		top: 30vh;
-	}
+	position: absolute;
+        top: 40%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
 }
 
 .volunteer-section {
-	@include contentSection($green, -51px);
-	// z-index: 1;
+	@include contentSection($green);
 }
 
 .single-volunteer {
@@ -251,16 +247,16 @@ table.event {
 }
 
 .about-section {
-	@include contentSection($pink, -51px);
+	@include contentSection($pink);
 }
 
 .events-section {
-	@include contentSection($green, -51px);
+	@include contentSection($green);
 
 }
 
 .workshop-section {
-	@include contentSection($lightgrey, -51px);
+	@include contentSection($lightgrey);
 	border-spacing: 2em;
 	width: 100vw;
 	margin: auto;
@@ -392,11 +388,11 @@ table.event {
 }
 
 .sponsors-section {
-	@include contentSection($pink, -51px);
+	@include contentSection($pink);
 }
 
 .contact-section {
-	@include contentSection($darkgrey, -51px);
+	@include contentSection($darkgrey);
 	text-align: center;
 	color: $white;
 }
@@ -404,24 +400,7 @@ table.event {
 // Images
 .logo {
 	width: 50vw;
-	height: auto;
-	max-width: 420px;
-	max-height: 40vh;
-}
-
-.main-img {
-	width: 85vw;
-	position: absolute;
-	bottom: 0px;
-	left: 15% * .5;
-
-	@media (max-height: 630px) {
-		display: none;
-	}
-
-	@media (max-width: 850px) {
-		display: none;
-	}
+	max-width: 380px;
 }
 
 #sudo-arrow {
@@ -436,6 +415,11 @@ table.event {
 .workshop-icon {
 	width: 55px;
 	fill: $green;
+}
+
+.contact-img {
+	margin: 1.5em;
+	max-width: 5em;
 }
 
 // Buttons
@@ -460,7 +444,7 @@ table.event {
 }
 
 .btn-pink {
-	@include buttonStyling ($pink, $white);
+	@include buttonStyling ($white, $pink);
 }
 
 // Bootstrap Fixes
