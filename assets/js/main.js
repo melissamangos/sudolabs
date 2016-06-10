@@ -1,32 +1,5 @@
 "use strict";
 
-// Global Variables
-var mentor_blurb;
-var instructor_blurb;
-var team_blurb;
-
-var mentor = 0;
-var instruc = 0;
-var team = 0;
-
-
-/**************************************
-FUNCTION: 	window.onload
-
-PURPOSE: 	Removes paragraphs in 
-			Volunteer section to be
-			added once clicked
-**************************************/
-// window.onload = function() {
-// 	mentor_blurb = document.getElementById("mentors");
-// 	instructor_blurb = document.getElementById("instructors");
-// 	team_blurb = document.getElementById("team");
-
-// 	mentor_blurb.parentNode.removeChild(mentor_blurb);
-// 	instructor_blurb.parentNode.removeChild(instructor_blurb);
-// 	team_blurb.parentNode.removeChild(team_blurb);
-// }
-
 /**************************************
 FUNCTION: 	volunteerDrop
 
@@ -130,9 +103,9 @@ function extendWorkshop(elem) {
 	}
 }
 
-/**************************************
-NOTE: THE FOLLOWING FUNCTIONS ARE NOT OURS
-**************************************/
+/***************************************************
+NOTE: THE FOLLOWING FUNCTIONS ARE FROM THE INTERNET
+***************************************************/
 
 /**************************************
 FUNCTION: 	currentYPosition
