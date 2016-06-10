@@ -206,38 +206,6 @@ table.event {
 	}
 }
 
-	// display: inline-block;
-	// margin: 2em;
-	// vertical-align: top;
-	// background-color: $pink;
-	// border-radius:10px;
-	// width: 100px;
-	// max-width: 100px;
-	// height: 100px;
-	// text-align: center;
-	// overflow: hidden;
-
-	// transition: all 0.2s 0.45s,
-	// 			height 0.2s $easer 0.25s, 
-	// 			max-width 0.2s $easer 0.35s, 
-	// 			width 0.2s $easer 0.35s;
-
-	// -webkit-transition: all 0.2s 0.45s,
-	// 			height 0.2s $easer 0.25s, 
-	// 			max-width 0.2s $easer 0.35s, 
-	// 			width 0.2s $easer 0.35s;
-
-	// &.expand {
-	// 	border-radius: 10px;
-	// 	width: 350px;
-	// 	height: 600px;
-	// 	max-width: 600px;
-	// 	padding: 0;
-
-	// 	transition: all 0.2s, max-width 0.2s $easer 0.1s, height 0.3s ease 0.25s;
-	// 	-webkit-transition: all 0.2s, max-width 0.2s $easer 0.1s, height 0.3s ease 0.25s;
-	// }
-
 .volunteer-blurb {
 	vertical-align: middle;
 	padding-top: 3em;
@@ -397,6 +365,10 @@ table.event {
 	color: $white;
 }
 
+a:hover {
+	text-decoration: none;
+}
+
 // Images
 .logo {
 	width: 50vw;
@@ -508,7 +480,7 @@ table.event {
 	border-left: 1px solid $white;
 }
 
-// Animations
+// Animations & Translations
 
 @mixin keyframes($animation-name) {
 	@-webkit-keyframes #{$animation-name} {
@@ -586,8 +558,6 @@ table.event {
 		@include animation(0.4s, 0s, expandBounce, ease-out);
 	}	
 }
-
-// CodePen Stuff
 
 .active {
 	.change-arrow {

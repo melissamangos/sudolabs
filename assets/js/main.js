@@ -4,9 +4,7 @@
 FUNCTION: 	volunteerDrop
 
 ARGUEMENTS: elem - sends the current 
-			element clicked to append
-			or remove the respective 
-			volunteer paragraph
+			element clicked 
 
 PURPOSE: 	Adds 'active' if opening
 			element, and 'inactive' if
