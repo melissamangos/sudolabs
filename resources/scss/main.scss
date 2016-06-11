@@ -34,7 +34,7 @@ $easer: cubic-bezier(0.4, 0, 0.2, 1);
 body {
 	background: #FFF;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  	font-size: 14px;
+  	font-size: 15px;
   	line-height: 1.42857143;
 	font-weight: 300;
 	padding-top: 50px;
@@ -256,8 +256,6 @@ table.event {
 	font-size: 2em;
 	line-height: 95px;
 	font-weight: bold;
-	// transform: rotate(0deg);
-	// -webkit-transform: rotate(0deg);
 
 	transition: all 0.7s $easer;
 	-webkit-transition: all 0.7s $easer;
@@ -333,6 +331,7 @@ table.event {
 		h3 {
 			font-size: 2em;
 		}
+		color: $darkgrey;
 	}
 }
 
@@ -371,6 +370,15 @@ table.event {
 
 .sponsors-section {
 	@include contentSection($pink);
+}
+
+.spons-content {
+	a {
+		color: $white;
+	}
+	a:hover {
+		color: $lightgrey;
+	}
 }
 
 .contact-section {
