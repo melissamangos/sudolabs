@@ -1,5 +1,9 @@
-// Colours
+@import 'sm-icons';
+@import 'normalize';
+@import 'demo';
+@import 'set1';
 
+// Colours
 $blue: #445d64;
 $pink: #ed7a88;
 $green: #45bab3;
@@ -93,6 +97,11 @@ body {
 	left: calc(50% - 25px); 
 	height: 5px; 
 	width: 50px;
+}
+
+.contact-subtitle {
+	font: 1.4em GothamLight;
+	margin-top: 2em;
 }
 
 // Events Formatting
@@ -374,6 +383,25 @@ a:hover {
 	text-decoration: none;
 }
 
+.sub {
+	border: 1px solid;
+	padding: 2em;
+	margin-top: 3em;
+	display: block;
+	max-width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.footer-section {
+	@include contentSection($darkgrey);
+	padding-top: 1em;
+	padding-bottom: 1em;
+	text-align: center;
+	color: $white;
+	font: .8em Pixel;
+}
+
 // Images
 .logo {
 	width: 50vw;
@@ -430,6 +458,7 @@ a:hover {
 
 // Bootstrap Fixes
 .container {
+	text-align: left;
 	padding-left: 5px;
 	padding-right: 5px;
 }
@@ -487,6 +516,10 @@ a:hover {
 
 .border-left-white {
 	border-left: 1px solid $white;
+}
+
+.no-top-margin {
+	margin-top: 0;
 }
 
 // Animations & Translations

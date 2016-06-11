@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/code-typer.css">
+	<link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
 	<link rel="shortcut icon" href="assets/imgs/sudo_icon.ico" />
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -30,8 +30,8 @@
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="#about" onclick="smoothScroll('about');">ABOUT</a></li>
 					<li><a href="#events" onclick="smoothScroll('events');">EVENTS</a></li>
-					<li><a href="#sponsors" onclick="smoothScroll('sponsors');">SPONSORS</a></li>
 					<li><a href="#workshops" onclick="smoothScroll('workshops');">WORKSHOPS</a></li>
+					<li><a href="#sponsors" onclick="smoothScroll('sponsors');">SPONSORS</a></li>
 					<li><a href="#volunteer" onclick="smoothScroll('volunteer');">VOLUNTEER</a></li>
 					<li><a href="#contact" onclick="smoothScroll('contact');">CONTACT</a></li>
 				</ul>
@@ -302,22 +302,30 @@
 		<div class="contact-subtitle">
 			Let's get coding.
 		</div>
-		<div class="contact-links">
-			<ul>
-				<li><a href="">FB</a></li>
-			</ul>
-			<ul>
-				<li><a href="">TWITTER</a></li>
-			</ul>
-			<ul>
-				<li><a href="">INSTA</a></li>
-			</ul>
-			<ul>
-				<li><a href="mailto:hello@sudolabs.ca">EMAIL</a></li>
-			</ul>
+		<div class="sm-content">
+		  <a href="#" class="sm-icon"><span>Facebook</span></a>
+		  <a href="#" class="sm-icon"><span>Twitter</span></a>
+		  <a href="#" class="sm-icon"><span>Instagram</span></a>
+		  <a href="mailto:hello@sudolabs.ca" class="sm-icon"><span>Email</span></a>
 		</div>
+
 		<!-- Begin MailChimp Signup Form -->
-		<!-- CARA FIX THIS MAKE IT PRETTY IDK IF IT EVEN WORKS IT MIGHT ON THE SERVER THO -->
+
+		<!-- MELISSA IS IT POSSIBLE TO INCORPORATE ALL THE FORM STUFF INTO THIS-->
+		<!-- START CARA FORM  -->
+		<div class="sub">
+		<h2 class="no-top-margin">Subscribe to our mailing list</h2>
+			<span class="input input--isao">
+				<input class="input__field input__field--isao" type="text" id="input-38" />
+				<label class="input__label input__label--isao" for="input-38" data-content="E-mail">
+					<span class="input__label-content input__label-content--isao">E-mail</span>
+				</label>
+			</span>
+			<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button btn-green"></div>
+		</div>
+		<!-- END CARA FORM  -->
+
+		
 		<div id="mc_embed_signup">
 			<form action="//sudolabs.us13.list-manage.com/subscribe/post?u=f4d1398bed089591b77229dd6&amp;id=1234b36ef2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 				<div id="mc_embed_signup_scroll">
@@ -337,8 +345,12 @@
 		</div>
 
 		<!--End mc_embed_signup-->
-		<!-- MADE WITH <3 BY CARA GOES HERE -->
 	</section>
+
+	<section class="footer-section">
+		<span class="footer-credit">MADE WITH <img src="assets/imgs/footer_heart.png"> BY CARA</span>
+	</section>
+
 </body>
 </html>
 
