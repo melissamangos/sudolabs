@@ -21,6 +21,11 @@ $easer: cubic-bezier(0.4, 0, 0.2, 1);
 	src: url(../../assets/fonts/gotham-light.ttf);
 }
 
+@font-face {
+	font-family: Pixel;
+	src: url(../../assets/fonts/pixelmix.ttf);
+}
+
 // Body
 body {
 	background: #FFF;
@@ -198,7 +203,7 @@ table.event {
 	ul {
 		display: inline-block;
 		li {
-			color: $blue;
+			color: $green;
 			font: 1.5em GothamBold;
 			display: inline-block;
 			vertical-align: bottom;
@@ -394,6 +399,10 @@ a:hover {
 	max-width: 5em;
 }
 
+.title-icon {
+	max-width: 1.3em;
+}
+
 // Buttons
 @mixin buttonStyling($bg-color, $font-color) {
 	background-color: $bg-color;
@@ -551,6 +560,7 @@ a:hover {
 }
 
 .single-volunteer {
+
 	&.inactive {
 		@include animation(0.4s, 0s, shrinkBounce, ease-out);
 	}
@@ -561,15 +571,18 @@ a:hover {
 
 .active {
 	.change-arrow {
+		
 	-webkit-transform: rotate(45deg) translate(-5px, -5px);
 	transform: rotate(45deg) translate(-5px, -5px);
 
 	&:before {
+	background-color: $green;
 	-webkit-transform: translate(10px, 0);
 	transform: translate(10px, 0);
 	}
 
 	&:after {
+	background-color: $green;
 	-webkit-transform: rotate(90deg) translate(10px, 0);
 	transform: rotate(90deg) translate(10px, 0);
 	}
@@ -595,23 +608,23 @@ a:hover {
 	float: right;
 
 	&:before {
+	background-color: $green;
 	position: absolute;
 	content: "";
 	display: inline-block;
 	width: 12px;
 	height: 3px;
-	background-color: $blue;
 	-webkit-transition: 0.4s ease;
 	transition: 0.4s ease;
 	}
 
 	&:after {
+	background-color: $green;
 	position: absolute;
 	content: "";
 	display: inline-block;
 	width: 12px;
 	height: 3px;
-	background-color: $blue;
 	-webkit-transition: 0.4s ease;
 	transition: 0.4s ease;
 	position: absolute;
