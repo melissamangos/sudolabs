@@ -1378,36 +1378,40 @@ body .nomargin-bottom {
   font-family: Pixel;
   src: url(../../assets/fonts/pixelmix.ttf); }
 
+@font-face {
+  font-family: 'Open Sans', sans-serif; }
+
 body {
+  -webkit-font-smoothing: antialiased !important;
   background: #FFF;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 15px;
+  font-size: 11pt;
   line-height: 1.42857143;
   font-weight: 300;
   padding-top: 50px;
   letter-spacing: .1pt; }
 
 .subtitle {
-  font: 1em GothamLight;
+  font-size: 1em;
   line-height: inherit;
   margin-left: 25%;
   margin-right: 25%; }
 
 .dark-title {
-  font: 4em GothamBold;
+  font: 2em GothamBold;
   color: #1c1c1c;
-  padding-bottom: .5em;
+  padding-bottom: 1em;
   margin-top: 0;
-  margin-bottom: .5em;
+  margin-bottom: 1em;
   text-transform: uppercase;
   position: relative; }
 
 .light-title {
-  font: 4em GothamBold;
+  font: 2em GothamBold;
   color: #FFFFFF;
-  padding-bottom: .5em;
+  padding-bottom: 1em;
   margin-top: 0;
-  margin-bottom: .5em;
+  margin-bottom: 1em;
   text-transform: uppercase;
   position: relative; }
 
@@ -1417,8 +1421,8 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 8px;
-  width: 70px; }
+  height: 3pt;
+  width: 50px; }
 
 .dark-title:after {
   content: "";
@@ -1426,11 +1430,12 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 8px;
-  width: 70px; }
+  height: 3pt;
+  width: 50px; }
 
 .contact-title {
-  font-size: 2em; }
+  font-size: 2em;
+  text-align: center; }
 
 .contact-title:after {
   content: "";
@@ -1487,10 +1492,12 @@ table.event {
 .nav-section {
   background-color: #445d64;
   padding: 5vw;
+  padding-top: 3em;
+  padding-bottom: 3em;
   padding: 0; }
   .nav-section ul li {
     text-decoration: none;
-    font: 1em GothamBold;
+    font: .8em GothamLight;
     color: #FFFFFF; }
     .nav-section ul li a {
       text-decoration: none !important;
@@ -1499,6 +1506,8 @@ table.event {
 .main-section {
   background-color: #f3f3f3;
   padding: 5vw;
+  padding-top: 3em;
+  padding-bottom: 3em;
   background-image: url("../../assets/imgs/icon-bg.png");
   background-repeat: repeat;
   height: 100vh;
@@ -1515,7 +1524,9 @@ table.event {
 
 .volunteer-section {
   background-color: #45bab3;
-  padding: 5vw; }
+  padding: 5vw;
+  padding-top: 3em;
+  padding-bottom: 3em; }
 
 .single-volunteer {
   background-color: #FFFFFF;
@@ -1543,17 +1554,22 @@ table.event {
 
 .about-section {
   background-color: #ed7a88;
-  padding: 5vw; }
+  padding: 5vw;
+  padding-top: 3em;
+  padding-bottom: 3em; }
 
 .events-section {
   background-color: #45bab3;
-  padding: 5vw; }
+  padding: 5vw;
+  padding-top: 3em;
+  padding-bottom: 3em; }
 
 .workshop-section {
   background-color: #f3f3f3;
   padding: 5vw;
+  padding-top: 3em;
+  padding-bottom: 3em;
   border-spacing: 2em;
-  width: 100vw;
   margin: auto; }
 
 .workshop-list {
@@ -1650,7 +1666,9 @@ table.event {
 
 .sponsors-section {
   background-color: #ed7a88;
-  padding: 5vw; }
+  padding: 5vw;
+  padding-top: 3em;
+  padding-bottom: 3em; }
 
 .spons-content a {
   color: #FFFFFF; }
@@ -1661,6 +1679,8 @@ table.event {
 .contact-section {
   background-color: #1c1c1c;
   padding: 5vw;
+  padding-top: 3em;
+  padding-bottom: 3em;
   text-align: center;
   color: #FFFFFF; }
 
@@ -1679,6 +1699,8 @@ a:hover {
 .footer-section {
   background-color: #1c1c1c;
   padding: 5vw;
+  padding-top: 3em;
+  padding-bottom: 3em;
   padding-top: 1em;
   padding-bottom: 1em;
   text-align: center;
@@ -1687,14 +1709,14 @@ a:hover {
 
 .logo {
   width: 50vw;
-  max-width: 380px; }
+  max-width: 310px; }
 
 #sudo-arrow {
   height: 50px; }
 
 .about-img {
   width: 80%;
-  max-width: 480px; }
+  max-width: 380px; }
 
 .workshop-icon {
   width: 55px;
@@ -1767,6 +1789,9 @@ a:hover {
   @media (min-width: 768px) {
     .container-adjustment {
       width: 100%; } }
+
+.btn-group-vertical > .btn-group:after, .btn-group-vertical > .btn-group:before, .btn-toolbar:after, .btn-toolbar:before, .clearfix:after, .clearfix:before, .container-fluid:after, .container-fluid:before, .container:after, .container:before, .dl-horizontal dd:after, .dl-horizontal dd:before, .form-horizontal .form-group:after, .form-horizontal .form-group:before, .modal-footer:after, .modal-footer:before, .modal-header:after, .modal-header:before, .nav:after, .nav:before, .navbar-collapse:after, .navbar-collapse:before, .navbar-header:after, .navbar-header:before, .navbar:after, .navbar:before, .pager:after, .pager:before, .panel-body:after, .panel-body:before, .row:after, .row:before {
+  display: inline; }
 
 .center {
   text-align: center; }
