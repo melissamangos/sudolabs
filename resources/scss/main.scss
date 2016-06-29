@@ -195,6 +195,11 @@ table.event {
         transform: translate(-50%, -50%)
 }
 
+
+.white-link {
+	color: $white;
+}
+
 .volunteer-section {
 	@include contentSection($green);
 }
@@ -377,9 +382,6 @@ table.event {
 }
 
 .spons-content {
-	a {
-		color: $white;
-	}
 	a:hover {
 		color: $lightgrey;
 	}

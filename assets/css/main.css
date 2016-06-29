@@ -1513,6 +1513,9 @@ table.event {
   margin-right: -50%;
   transform: translate(-50%, -50%); }
 
+.white-link {
+  color: #FFFFFF; }
+
 .volunteer-section {
   background-color: #45bab3;
   padding: 5vw; }
@@ -1651,9 +1654,6 @@ table.event {
 .sponsors-section {
   background-color: #ed7a88;
   padding: 5vw; }
-
-.spons-content a {
-  color: #FFFFFF; }
 
 .spons-content a:hover {
   color: #f3f3f3; }
