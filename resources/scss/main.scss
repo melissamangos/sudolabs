@@ -30,11 +30,16 @@ $easer: cubic-bezier(0.4, 0, 0.2, 1);
 	src: url(../../assets/fonts/pixelmix.ttf);
 }
 
+@font-face {
+	font-family: 'Open Sans', sans-serif;
+}
+
 // Body
 body {
+	-webkit-font-smoothing: antialiased !important;
 	background: #FFF;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  	font-size: 15px;
+  	font-size: 11pt;
   	line-height: 1.42857143;
 	font-weight: 300;
 	padding-top: 50px;
@@ -43,18 +48,18 @@ body {
 
 // Typography
 .subtitle {
-	font: 1em GothamLight;
+	font-size: 1em;
 	line-height: inherit;
 	margin-left: 100% * 0.25;
 	margin-right: 100% * 0.25;
 }
 
 @mixin titles($font-color) {
-	font: 4em GothamBold;
+	font: 2em GothamBold;
 	color: $font-color;
-	padding-bottom: .5em;
+	padding-bottom: 1em;
 	margin-top: 0;
-	margin-bottom: .5em;
+	margin-bottom: 1em;
 	text-transform: uppercase;
 	position: relative;
 }
@@ -73,8 +78,8 @@ body {
 	position: absolute; 
 	bottom: 0; 
 	left: 0; 
-	height: 8px; 
-	width: 70px;
+	height: 3pt; 
+	width: 50px;
 }
 
 .light-title:after {
@@ -87,6 +92,7 @@ body {
 
 .contact-title {
 	font-size: 2em;
+	text-align: center;
 }
 
 .contact-title:after {
@@ -156,6 +162,8 @@ table.event {
 @mixin contentSection($color) {
 	background-color: $color;
 	padding: 5vw;
+	padding-top: 3em;
+	padding-bottom: 3em;
 }
 
 .nav-section {
@@ -164,7 +172,7 @@ table.event {
 	ul {
 		li {
 			text-decoration: none;
-			font: 1em GothamBold;
+			font: .8em GothamLight;
 			color: $white;	
 			a {
 				text-decoration: none !important;
@@ -189,10 +197,10 @@ table.event {
 
 .main-content {
 	position: absolute;
-        top: 40%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%)
+    top: 40%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
 }
 
 
@@ -245,7 +253,6 @@ table.event {
 .workshop-section {
 	@include contentSection($lightgrey);
 	border-spacing: 2em;
-	width: 100vw;
 	margin: auto;
 }
 
@@ -419,7 +426,7 @@ a:hover {
 // Images
 .logo {
 	width: 50vw;
-	max-width: 380px;
+	max-width: 310px;
 }
 
 #sudo-arrow {
@@ -428,7 +435,7 @@ a:hover {
 
 .about-img {
 	width: 80%;
-	max-width: 480px;
+	max-width: 380px;
 }
 
 .workshop-icon {
@@ -505,6 +512,10 @@ a:hover {
 	@media (min-width: 768px) {
 		width: 100%;
 	}
+}
+
+.btn-group-vertical>.btn-group:after, .btn-group-vertical>.btn-group:before, .btn-toolbar:after, .btn-toolbar:before, .clearfix:after, .clearfix:before, .container-fluid:after, .container-fluid:before, .container:after, .container:before, .dl-horizontal dd:after, .dl-horizontal dd:before, .form-horizontal .form-group:after, .form-horizontal .form-group:before, .modal-footer:after, .modal-footer:before, .modal-header:after, .modal-header:before, .nav:after, .nav:before, .navbar-collapse:after, .navbar-collapse:before, .navbar-header:after, .navbar-header:before, .navbar:after, .navbar:before, .pager:after, .pager:before, .panel-body:after, .panel-body:before, .row:after, .row:before {
+	display: inline;
 }
 
 // Utilities
