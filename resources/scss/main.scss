@@ -388,12 +388,6 @@ table.event {
 	@include contentSection($pink);
 }
 
-.spons-content {
-	a:hover {
-		color: $lightgrey;
-	}
-}
-
 .contact-section {
 	@include contentSection($darkgrey);
 	text-align: center;
@@ -471,6 +465,9 @@ a:hover {
 
 .btn-white {
 	@include buttonStyling ($white, $green);
+	&:hover {
+		color: $green;
+	}
 }
 
 .btn-pink {

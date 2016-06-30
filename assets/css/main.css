@@ -1673,9 +1673,6 @@ table.event {
   padding-top: 3em;
   padding-bottom: 3em; }
 
-.spons-content a:hover {
-  color: #f3f3f3; }
-
 .contact-section {
   background-color: #1c1c1c;
   padding: 5vw;
@@ -1750,6 +1747,8 @@ a:hover {
   border: none;
   padding: .6em 2em .6em 2em;
   max-width: 350px; }
+  .btn-white:hover {
+    color: #45bab3; }
 
 .btn-pink {
   background-color: #FFFFFF;
