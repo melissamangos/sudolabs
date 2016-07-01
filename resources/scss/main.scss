@@ -8,7 +8,7 @@ $blue: #445d64;
 $pink: #ed7a88;
 $green: #45bab3;
 $darkgrey: #1c1c1c;
-$lightgrey: #f3f3f3;
+$lightgrey: #f5f5f5;
 $white: #FFFFFF;
 
 
@@ -39,7 +39,7 @@ body {
 	-webkit-font-smoothing: antialiased !important;
 	background: #FFF;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  	font-size: 11pt;
+  	font-size: 12pt;
   	line-height: 1.42857143;
 	font-weight: 300;
 	padding-top: 50px;
@@ -50,8 +50,16 @@ body {
 .subtitle {
 	font-size: 1em;
 	line-height: inherit;
-	margin-left: 100% * 0.25;
-	margin-right: 100% * 0.25;
+}
+
+.blurb {
+	padding: 5em;
+	max-width: 500px;
+}
+
+.main-img-container {
+	padding: 4em;
+	text-align: center;
 }
 
 @mixin titles($font-color) {
@@ -167,16 +175,16 @@ table.event {
 }
 
 .nav-section {
-	@include contentSection($blue);
+	@include contentSection($lightgrey);
 	padding: 0;
 	ul {
 		li {
 			text-decoration: none;
-			font: .8em GothamLight;
+			font: .8em GothamBold;
 			color: $white;	
 			a {
 				text-decoration: none !important;
-				color: $white !important;
+				color: $darkgrey !important;
 			}	
 			// a:hover {
 			// 	CARA ADD HOVER
@@ -187,12 +195,11 @@ table.event {
 
 .main-section {
 	@include contentSection($lightgrey);
-	background-image: url("../../assets/imgs/icon-bg.png");
-    background-repeat: repeat;
 	height: 100vh;
 	position: relative;
-	text-align: center;
 	padding-bottom: -50px;
+	background-image: url("../../assets/imgs/icon-bg.png");
+  	background-repeat: repeat;
 }
 
 .main-content {
@@ -451,28 +458,48 @@ a:hover {
 }
 
 // Buttons
-@mixin buttonStyling($bg-color, $font-color) {
-	background-color: $bg-color;
-	font: 1em GothamBold;
+@mixin buttonStyling($font-color) {
+	background-color: transparent;
+	font: .8em GothamBold;
 	color: $font-color;
+	border: $font-color 2px solid;
 	text-transform: uppercase;
-	border-radius: 50px;
+	border-radius: 6px;
 	width: 150px;
-	border: none;
 	padding: .6em 2em .6em 2em;
 	max-width: 350px;
 }
 
+button:focus {
+	outline:0;
+}
+
 .btn-green {
-	@include buttonStyling ($green, $white);
+	@include buttonStyling ($green);
+	margin-top: 1em;
+}
+
+.btn-green:hover {
+	background-color: $green;
+	color: $white;
 }
 
 .btn-white {
-	@include buttonStyling ($white, $green);
+	@include buttonStyling ($white);
+}
+
+.btn-white:hover {
+	background-color: $white;
+	color: $green;
 }
 
 .btn-pink {
-	@include buttonStyling ($white, $pink);
+	@include buttonStyling ($white);
+}
+
+.btn-pink:hover {
+	background-color: $pink;
+	color: $white;
 }
 
 // Bootstrap Fixes
@@ -543,6 +570,10 @@ a:hover {
 
 .no-top-margin {
 	margin-top: 0;
+}
+
+.bold {
+	font-weight: bold;
 }
 
 // Animations & Translations
