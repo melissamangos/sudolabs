@@ -1391,13 +1391,10 @@ body {
   padding-top: 50px;
   letter-spacing: .1pt; }
 
-.subtitle {
-  font-size: 1em;
-  line-height: inherit; }
-
 .blurb {
   padding: 5em;
-  max-width: 500px; }
+  max-width: 500px;
+  text-align: center; }
 
 .main-img-container {
   padding: 4em;
@@ -1526,6 +1523,9 @@ table.event {
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%); }
+
+.white-link {
+  color: #FFFFFF; }
 
 .volunteer-section {
   background-color: #45bab3;
@@ -1675,12 +1675,6 @@ table.event {
   padding-top: 3em;
   padding-bottom: 3em; }
 
-.spons-content a {
-  color: #FFFFFF; }
-
-.spons-content a:hover {
-  color: #f5f5f5; }
-
 .contact-section {
   background-color: #1c1c1c;
   padding: 5vw;
@@ -1717,7 +1711,8 @@ a:hover {
   max-width: 310px; }
 
 #sudo-arrow {
-  height: 50px; }
+  margin-top: 13px;
+  height: 20px; }
 
 .about-img {
   width: 80%;

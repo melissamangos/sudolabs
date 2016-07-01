@@ -47,14 +47,10 @@ body {
 }
 
 // Typography
-.subtitle {
-	font-size: 1em;
-	line-height: inherit;
-}
-
 .blurb {
 	padding: 5em;
 	max-width: 500px;
+	text-align: center;
 }
 
 .main-img-container {
@@ -208,6 +204,11 @@ table.event {
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%)
+}
+
+
+.white-link {
+	color: $white;
 }
 
 .volunteer-section {
@@ -390,15 +391,6 @@ table.event {
 	@include contentSection($pink);
 }
 
-.spons-content {
-	a {
-		color: $white;
-	}
-	a:hover {
-		color: $lightgrey;
-	}
-}
-
 .contact-section {
 	@include contentSection($darkgrey);
 	text-align: center;
@@ -435,7 +427,8 @@ a:hover {
 }
 
 #sudo-arrow {
-	height: 50px;
+	margin-top: 13px;
+	height: 20px;
 }
 
 .about-img {
