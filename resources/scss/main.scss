@@ -4,6 +4,7 @@
 @import 'set1';
 @import 'type';
 @import 'card';
+@import 'tabs';
 
 // Colours
 $blue: #445d64;
@@ -97,15 +98,14 @@ body {
 	@include underline($darkgrey);
 }
 
-.contact-subtitle {
+.subtitle {
 	font: 1.4em GothamLight;
-	margin-top: 2em;
 }
 
 // Sections
 @mixin contentSection($color) {
 	background-color: $color;
-	padding: 5vw;
+	padding: 6vw;
 	padding-top: 3em;
 	padding-bottom: 3em;
 }
@@ -157,19 +157,23 @@ body {
 
 .single-volunteer {
 	background-color: $white;
-	border-radius: 10px;
-	padding: 1em;
+	border-radius: 2px;
+	padding: .8em;
+	padding-left: 0;
 	padding-bottom: 2em;
 	margin: 1em;
 	overflow: hidden;
 	height: 50px;
 	max-height: 50px;
+	max-width: 600px;
+	margin-right: auto;
+	margin-left: auto;
 
 	ul {
 		display: inline-block;
 		li {
 			color: $green;
-			font: 1.5em GothamBold;
+			font: 1.2em GothamBold;
 			display: inline-block;
 			vertical-align: bottom;
 		}
@@ -191,8 +195,14 @@ body {
 }
 
 .events-section {
-	@include contentSection($green);
+	@include contentSection($pink);
+}
 
+.sponsors-section {
+	@include contentSection(transparent);
+	background: url("../../assets/imgs/sponsors_backdrop.png");
+    background-size: cover;
+    background-position: center;
 }
 
 .workshop-section {
@@ -224,6 +234,10 @@ body {
 		transition: all 0.5s $easer;
 		-webkit-transition: all 0.5s $easer;
 	}
+}
+
+#team-full {
+	height: 600px;
 }
 
 .single-workshop {
@@ -329,10 +343,6 @@ body {
 	background-color: $green;
 }
 
-.sponsors-section {
-	@include contentSection($pink);
-}
-
 .contact-section {
 	@include contentSection($darkgrey);
 	text-align: center;
@@ -341,6 +351,7 @@ body {
 
 a:hover {
 	text-decoration: none;
+	color: $white;
 }
 
 .sub {
@@ -399,6 +410,11 @@ a:hover {
 	margin-left: 0;
 }
 
+.volunteer-icon {
+	width: 23px;
+	margin-right: .7em;
+}
+
 // Buttons
 @mixin buttonStyling($font-color) {
 	background-color: transparent;
@@ -410,6 +426,7 @@ a:hover {
 	width: 150px;
 	padding: .6em 2em .6em 2em;
 	max-width: 350px;
+	margin-top: .4em;
 }
 
 button:focus {
@@ -436,12 +453,21 @@ button:focus {
 }
 
 .btn-pink {
-	@include buttonStyling ($white);
+	@include buttonStyling ($pink);
 }
 
 .btn-pink:hover {
 	background-color: $pink;
 	color: $white;
+}
+
+.btn-white {
+	@include buttonStyling ($white);
+}
+
+.btn-white:hover {
+	background-color: $white;
+	color: $pink;
 }
 
 // Bootstrap Fixes
@@ -491,6 +517,10 @@ button:focus {
 }
 
 .dark {
+	color: $darkgrey;
+}
+
+.dark:hover {
 	color: $darkgrey;
 }
 
@@ -561,26 +591,26 @@ button:focus {
 	}
 
 	60% {
-		height: 250px;
-		max-height: 250px;
+		height: 350px;
+		max-height: 350px;
 
 	}
 
 	100% {
-		height: 200px;
-		max-height: 200px;
+		height: 300px;
+		max-height: 300px;
 	}
 }
 
 @include keyframes(shrinkBounce) {
 	0% {
-		height: 200px;
-		max-height: 200px;
+		height: 300px;
+		max-height: 300px;
 	}
 
 	40% {
-		height: 250px;
-		max-height: 250px;
+		height: 350px;
+		max-height: 350px;
 
 	}
 
