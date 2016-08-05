@@ -245,7 +245,7 @@ body {
 	margin: 2em;
 	vertical-align: top;
 	background-color: $pink;
-	border-radius:10px;
+	border-radius:2px;
 	width: 100px;
 	max-width: 100px;
 	height: 100px;
@@ -263,7 +263,7 @@ body {
 				width 0.2s $easer 0.35s;
 
 	&.expand {
-		border-radius: 10px;
+		border-radius: 2px;
 		width: 350px;
 		height: 600px;
 		max-width: 600px;
