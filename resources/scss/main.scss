@@ -1,10 +1,8 @@
 @import 'sm-icons';
-@import 'normalize';
-@import 'demo';
 @import 'set1';
 @import 'type';
 @import 'card';
-@import 'tabs';
+@import 'accordion';
 
 // Colours
 $blue: #445d64;
@@ -356,6 +354,7 @@ a:hover {
 
 .sub {
 	border: 1px solid;
+	border-radius: 2px;
 	padding: 2em;
 	margin-top: 3em;
 	display: block;
@@ -422,7 +421,7 @@ a:hover {
 	color: $font-color;
 	border: $font-color 2px solid;
 	text-transform: uppercase;
-	border-radius: 6px;
+	border-radius: 2px;
 	width: 150px;
 	padding: .6em 2em .6em 2em;
 	max-width: 350px;
