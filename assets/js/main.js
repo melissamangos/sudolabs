@@ -155,7 +155,7 @@ PURPOSE: 	Takes the current position,
 **************************************/
 function smoothScroll(eID) {
 	var startY = currentYPosition();
-	var stopY = elmYPosition(eID) - 60;
+	var stopY = elmYPosition(eID) - 50;
 	var distance = stopY > startY ? stopY - startY : startY - stopY;
 	if (distance < 100) {
 		scrollTo(0, stopY); return;
