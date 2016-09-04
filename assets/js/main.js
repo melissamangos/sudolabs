@@ -178,7 +178,10 @@ function smoothScroll(eID) {
 }
 
 
-/* Cara's shit */
+/**************************************
+PURPOSE: 	Highlights the Navigation
+			Section name on scroll-over
+**************************************/
 $(window).on("scroll", function() {
 	
 	$(".nav>li>a").removeClass("pink");
