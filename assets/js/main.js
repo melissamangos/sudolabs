@@ -155,7 +155,7 @@ PURPOSE: 	Takes the current position,
 **************************************/
 function smoothScroll(eID) {
 	var startY = currentYPosition();
-	var stopY = elmYPosition(eID) - 60;
+	var stopY = elmYPosition(eID);
 	var distance = stopY > startY ? stopY - startY : startY - stopY;
 	if (distance < 100) {
 		scrollTo(0, stopY); return;
@@ -176,3 +176,42 @@ function smoothScroll(eID) {
 		leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
 	}
 }
+
+
+/* Cara's shit */
+$(window).on("scroll", function() {
+	
+	$(".nav>li>a").removeClass("pink");
+
+	var aboutPosition = $("#about").position().top;
+	var eventsPosition = $("#events").position().top;
+	var workshopsPosition = $("#workshops").position().top;
+	var volunteerPosition = $("#volunteer").position().top;
+	var sponsorsPosition = $("#sponsors").position().top;
+	var contactPosition = $("#contact").position().top;
+
+    if($(window).scrollTop() >= aboutPosition && $(window).scrollTop() < eventsPosition) {
+        // About Section
+        $("#menu-about").addClass("pink");
+    } 
+    else if ($(window).scrollTop() >= eventsPosition && $(window).scrollTop() < workshopsPosition) {
+    	// Event Section
+    	$("#menu-events").addClass("pink");	
+    }
+    else if ($(window).scrollTop() >= workshopsPosition && $(window).scrollTop() < volunteerPosition) {
+    	// Workshops Section
+    	$("#menu-workshops").addClass("pink");	
+    }
+    else if ($(window).scrollTop() >= volunteerPosition && $(window).scrollTop() < sponsorsPosition) {
+    	// Volunteer Section
+    	$("#menu-volunteer").addClass("pink");	
+    }
+    else if ($(window).scrollTop() >= sponsorsPosition && $(window).scrollTop() < contactPosition) {
+    	// Sponsors Section
+    	$("#menu-sponsors").addClass("pink");
+    }
+    else if ($(window).scrollTop() >= contactPosition) {
+    	// Contact Section
+    	$("#menu-contact").addClass("pink");	
+    }
+});

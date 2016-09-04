@@ -38,7 +38,7 @@ $easer: cubic-bezier(0.4, 0, 0.2, 1);
 // Body
 body {
 	-webkit-font-smoothing: antialiased !important;
-	background: #FFF;
+	background: $lightgrey;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   	font-size: 11.5pt;
   	line-height: 1.42857143;
@@ -109,7 +109,8 @@ body {
 }
 
 .nav-section {
-	@include contentSection($lightgrey);
+	@include contentSection($white);
+	background: rgba(245, 245, 245, 0.8);
 	padding: 0;
 	ul {
 		li {
@@ -117,8 +118,7 @@ body {
 			font: .8em GothamBold;
 			color: $white;	
 			a {
-				text-decoration: none !important;
-				color: $darkgrey !important;
+				color: $darkgrey;
 			}	
 			// a:hover {
 			// 	CARA ADD HOVER
@@ -349,7 +349,7 @@ body {
 
 a:hover {
 	text-decoration: none;
-	color: $white;
+	color: inherit;
 }
 
 .sub {
@@ -510,6 +510,10 @@ button:focus {
 	display: inline;
 }
 
+.navbar-default .navbar-nav>li>a {
+	color: $darkgrey;
+}
+
 // Utilities
 .center {
 	text-align: center;
@@ -525,6 +529,10 @@ button:focus {
 
 .white {
 	color: $white;
+}
+
+.pink {
+	color: $pink !important;
 }
 
 .max-width {
