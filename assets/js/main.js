@@ -85,22 +85,6 @@ function closeAnimation(elem) {
 	}
 }
 
-/**************************************
-FUNCTION: 	extendWorkshop
-
-ARGUEMENTS: elem - sends current element 
-
-PURPOSE: 	Adds or removes class 'expand'
-			to a workshop element
-**************************************/
-function extendWorkshop(elem) {
-	if (elem.classList.contains("expand")) {
-		elem.classList.remove("expand");
-	} else {
-		elem.classList.add("expand");
-	}
-}
-
 /***************************************************
 NOTE: THE FOLLOWING FUNCTIONS ARE FROM THE INTERNET
 ***************************************************/

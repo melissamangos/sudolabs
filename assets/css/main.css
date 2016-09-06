@@ -1107,10 +1107,24 @@ h1.type {
 
 .card-details {
   margin: 2em;
-  font-size: .9em; }
+  font-size: .93em; }
 
 .card-meta {
   margin-bottom: 1em; }
+
+.workshop-card {
+  background-color: white;
+  border-radius: 2px;
+  margin: auto;
+  max-width: 800px; }
+
+.workshop-card-details {
+  padding: 2em;
+  font-size: .93em; }
+
+.cutout {
+  background-color: transparent;
+  border: 1px dashed black; }
 
 .transition, p.acc, ul.acc li i:before, ul.acc li i:after {
   transition: all 0.25s ease-in-out; }
@@ -1130,7 +1144,7 @@ h1.type {
 .acc-container {
   background-color: white;
   padding: 1.5em;
-  max-width: 600px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 2px; }
@@ -1264,6 +1278,10 @@ body {
   padding-top: 50px;
   letter-spacing: .1pt; }
 
+hr {
+  margin-top: 1em;
+  margin-bottom: 1em; }
+
 .blurb {
   padding: 5em;
   max-width: 500px;
@@ -1313,6 +1331,30 @@ body {
 
 .subtitle {
   font: 1.4em GothamLight; }
+
+.workshop-card-title {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #1c1c1c;
+  margin-bottom: .5em; }
+
+.pill {
+  display: inline-block;
+  background-color: #ed7a88;
+  font-size: .8em;
+  color: #FFFFFF;
+  font-weight: bold;
+  padding: .2em;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 100em;
+  text-transform: uppercase;
+  margin-bottom: 1em; }
+
+.duration {
+  font-size: .9em;
+  color: #1c1c1c;
+  margin-left: 1em; }
 
 .nav-section {
   background-color: #FFFFFF;
@@ -1414,101 +1456,6 @@ body {
   border-spacing: 2em;
   margin: auto; }
 
-.workshop-list {
-  width: 100%; }
-
-.workshop-button {
-  cursor: pointer;
-  width: 100px;
-  height: 100px;
-  display: inline-block;
-  font-size: 2em;
-  line-height: 95px;
-  font-weight: bold;
-  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-  -webkit-transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
-  .workshop-button.expand {
-    transform: rotate(720deg);
-    -webkit-transform: rotate(720deg);
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    -webkit-transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
-
-#team-full {
-  height: 600px; }
-
-.single-workshop {
-  display: inline-block;
-  margin: 2em;
-  vertical-align: top;
-  background-color: #ed7a88;
-  border-radius: 2px;
-  width: 100px;
-  max-width: 100px;
-  height: 100px;
-  text-align: center;
-  overflow: hidden;
-  transition: all 0.2s 0.45s, height 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.25s, max-width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.35s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.35s;
-  -webkit-transition: all 0.2s 0.45s, height 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.25s, max-width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.35s, width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.35s; }
-  .single-workshop.expand {
-    border-radius: 2px;
-    width: 350px;
-    height: 600px;
-    max-width: 600px;
-    padding: 0;
-    transition: all 0.2s, max-width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.1s, height 0.3s ease 0.25s;
-    -webkit-transition: all 0.2s, max-width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.1s, height 0.3s ease 0.25s; }
-
-.workshop-content {
-  transform: translateY(100%);
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  text-align: left;
-  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s 0.2s;
-  -webkit-transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s 0.2s; }
-
-.expand .workshop-content {
-  transform: translateY(0px);
-  -webkit-transform: translateY(0px);
-  opacity: 1;
-  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.05s, opacity 0s;
-  -webkit-transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.05s, opacity 0s; }
-
-.workshop-content .workshop-head {
-  padding: 0em 2em 1em 2em;
-  overflow: auto;
-  color: #1c1c1c; }
-  .workshop-content .workshop-head h3 {
-    font-size: 2em; }
-
-.workshop-content .workshop-body {
-  background-color: #FFFFFF;
-  width: 100%;
-  height: 100%;
-  padding: 2em 2em 1em 2em;
-  box-sizing: border-box;
-  position: relative; }
-
-.workshop-sub {
-  font-size: 1.2em; }
-
-.action-bar {
-  position: absolute;
-  bottom: 45%;
-  padding-left: 15px;
-  margin-top: 2em;
-  border-top: 1px solid #E0E0E0;
-  width: 80%; }
-
-.action-bar a {
-  text-transform: uppercase;
-  line-height: 52px;
-  color: #445d64;
-  margin-right: 1em; }
-
-#workshop-idea {
-  background-color: #45bab3; }
-
 .contact-section {
   background-color: #1c1c1c;
   padding: 6vw;
@@ -1555,8 +1502,8 @@ a:hover {
   max-width: 380px; }
 
 .workshop-icon {
-  width: 55px;
-  fill: #45bab3; }
+  width: 2.7em;
+  float: right; }
 
 .center-img {
   margin: 1.5em;

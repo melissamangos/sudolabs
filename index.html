@@ -89,7 +89,7 @@
 						<br><img src="assets/imgs/event_time.svg" class="event-icon"> 12:00pm - 4:00pm
 						<br><img src="assets/imgs/event_location.svg" class="event-icon"> <a class="dark" target="_blank" href="https://www.google.ca/maps/place/130+Johnson+St,+Kingston,+ON+K7L+1X8/@44.2297875,-76.487161,17z/data=!3m1!4b1!4m5!3m4!1s0x4cd2aafe44c01b05:0x5dc1710de2b2674f!8m2!3d44.2297875!4d-76.484967">Kingston Frontenac Public Library, Kingston, ON</a>
 					</div>
-					<p>Learn to build an online portfolio using HTML and CSS in an interactive and collaborative environment. No prior experience required. Please bring a charged laptop. The library may be able to provide laptops for those who are not able to bring one from home - please email programs@kfpl.ca. The workshop will take place in the Delahaye room of KFPL's Central Branch.
+					<p>Learn to build an online portfolio using HTML and CSS in an interactive and collaborative environment. No prior experience required. Please bring a charged laptop. The library may be able to provide laptops for those who are not able to bring one from home - please email <a href="mailto:programs@kfpl.ca" class="no-change-hover">programs@kfpl.ca</a>. The workshop will take place in the Delahaye room of KFPL's Central Branch.
 
 					<br/><br/>Apply to be a Volunteer Mentor for this workshop by emailing <a href="mailto:hello@sudolabs.ca" class="no-change-hover">hello@sudolabs.ca</a></p>
 					<div class="center">
@@ -106,53 +106,47 @@
 				<img src="assets/imgs/workshops_icon.svg" class="center-img">
 				<h1 class="dark-title">Workshops</h1>
 			</div>
-			<div class="workshop list">
-				<div class="single-workshop expand">
-					<span class="workshop-button" onclick="extendWorkshop(this.parentElement);"><img src="assets/imgs/htmlcss.svg" class="workshop-icon"></span>
-					<div class="workshop-content">
-						<div class="workshop-head">
-							<h3>Introduction to Web Development</h3>
-							<p class="workshop-sub">4 hrs</p>
-						</div>
-						<div class="workshop-body">
-							<p>
-								In this workshop, you'll learn to build an online portfolio using HTML and CSS. The Sudo workshops team has tailored this workshop to be interactive and collaborative, allowing you to easily complete and customize the final project with no prior experience.<!-- <br><br> View our demo below showcasing what you will make with us! --><br><br>
-								Be sure to bring your own laptop and download a text editor (such as Sublime Text) in preparation for the event.
-							</p>
-							<div class="action-bar"><a class="acc" target="_blank" href="workshops/intro_web_dev/index.html">VIEW DEMO</a></div>
-						</div>
+			
+			<div class="workshop-card">
+				<div class="workshop-card-details">
+					<img src="assets/imgs/workshops_html.png" class="workshop-icon" alt="HTML icon">
+					<div class="workshop-card-title">Introduction to Web Development</div>
+					<span class="pill">HTML</span> <span class="pill">CSS</span> <span class="duration italic">•&nbsp;&nbsp;&nbsp;&nbsp;Duration: 4 hours</span>
+					<p>In this workshop, you'll learn to build an online portfolio using HTML and CSS. The Sudo workshops team has tailored this workshop to be interactive and collaborative, allowing you to easily complete and customize the final project with no prior experience.</p>
+					<p>Be sure to bring your own laptop and download a text editor (such as Sublime Text) in preparation for the event.</p>
+					<hr/>
+					<div class="center">
+						<a href="workshops/intro_web_dev/index.html" target="_blank"><button class="btn-pink">View Demo</button></a>
 					</div>
 				</div>
-				<div class="single-workshop expand">
-					<span class="workshop-button" onclick="extendWorkshop(this.parentElement);"><img src="assets/imgs/python.svg" class="workshop-icon"></span>
-					<div class="workshop-content">
-						<div class="workshop-head">
-							<h3>Introduction to Computer Science</h3>
-							<p class="workshop-sub">4 hrs</p>
-						</div>
-						<div class="workshop-body">
-							<p>
-								In this workshop, you'll learn the basic concepts of programming in the language Python. This interactive workshop is tailored for beginners, allowing anyone to easily follow along and develop a customizable project.<!-- <br><br> View our demo below showcasing what you will make with us! --><br><br>
-								Be sure to bring your own laptop and download the newest version of Python in preparation for the event.
-							</p>
-							<div class="action-bar"><a class="acc" target="_blank" href="https://www.python.org/downloads/">DOWNLOAD PYTHON</a><!-- <a class="acc" href="#events" onclick="smoothScroll('events');">Look for Events</a> --></div>
-						</div>
+			</div>
+			
+			<br>
+			<div class="workshop-card">
+				<div class="workshop-card-details">
+					<img src="assets/imgs/workshops_python.png" class="workshop-icon" alt="HTML icon">
+					<div class="workshop-card-title">Introduction to Computer Science</div>
+					<span class="pill">Python</span> <span class="duration italic">•&nbsp;&nbsp;&nbsp;&nbsp;Duration: 4 hours</span>
+					<p>In this workshop, you'll learn the basic concepts of programming in the language Python. This interactive workshop is tailored for beginners, allowing anyone to easily follow along and develop a customizable project.</p>
+					<p>Be sure to bring your own laptop and download the newest version of Python in preparation for the event.</p>
+					<hr/>
+					<div class="center">
+						<a href="https://www.python.org/downloads/" target="_blank"><button class="btn-pink">Download Python</button></a>
 					</div>
 				</div>
-				<!-- Add Python workshop in here -->
-				<div class="single-workshop" id="workshop-idea">
-					<span class="workshop-button" onclick="extendWorkshop(this.parentElement);"><img src="assets/imgs/lightbulb.svg" class="workshop-icon"></span>
-					<div class="workshop-content" >
-						<div class="workshop-head">
-							<h3>Have A Workshop Idea?<br></h3>
-							<p class="workshop-sub"><br></p>
-						</div>
-						<div class="workshop-body">
-							<p>
-								Are there any languages, frameworks, or concepts you believe Kingston would like to learn? We tailor our workshops to suit the Kingston community, and would love to hear what workshops you would like to see next.<br><br>Reach out to us at <a class="acc" href="mailto:workshops@sudolabs.ca">workshops@sudolabs.ca</a> to pitch your idea!
-							</p>
-							<div class="action-bar"><a class="acc" href="#contact" onclick="smoothScroll('contact');">CONTACT</a><a class="acc" href="#volunteer" onclick="forceOpen('team-full'); smoothScroll('volunteer');">JOIN OUR TEAM</a></div>
-						</div>
+			</div>
+
+			<br>
+			<div class="workshop-card cutout">
+				<div class="workshop-card-details">
+					<img src="assets/imgs/lightbulb.svg" class="workshop-icon" alt="HTML icon">
+					<div class="workshop-card-title">Have A Workshop Idea?</div>
+				
+					<p>Are there any languages, frameworks, or concepts you believe Kingston would like to learn? We tailor our workshops to suit the Kingston community, and would love to hear what workshops you would like to see next.<br><br>Reach out to us at <a class="acc" href="mailto:workshops@sudolabs.ca">workshops@sudolabs.ca</a> to pitch your idea!</p>
+					<hr/>
+					<div class="center">
+						<button class="btn-pink" href="#contact" onclick="smoothScroll('contact');">Contact</button>
+						<button class="btn-pink" href="#volunteer" onclick="smoothScroll('volunteer');">Join Our Team</button>
 					</div>
 				</div>
 			</div>
