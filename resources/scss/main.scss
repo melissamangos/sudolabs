@@ -420,6 +420,12 @@ button:focus {
 	text-align: center;
 }
 
+.inline-center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .dark {
 	color: $darkgrey;
 }

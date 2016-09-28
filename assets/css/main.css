@@ -1627,6 +1627,11 @@ button:focus {
 .center {
   text-align: center; }
 
+.inline-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
 .dark {
   color: #1c1c1c; }
 
