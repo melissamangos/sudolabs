@@ -1106,11 +1106,12 @@ h1.type {
   border-radius: 2px 2px 0px 0px; }
 
 .card-details {
-  margin: 2em;
+  padding: 2em;
   font-size: .93em; }
 
 .card-meta {
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  margin-top: 1em; }
 
 .workshop-card {
   background-color: white;
